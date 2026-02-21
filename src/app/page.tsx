@@ -19,6 +19,9 @@ import {
   ArrowRight,
   Menu,
   ChevronRight,
+  Linkedin,
+  Twitter,
+  MessageSquare,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -379,10 +382,10 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-12 sm:py-20 px-4 sm:px-6">
+        <footer className="py-12 sm:py-20 px-4 sm:px-6 border-t border-white/10">
           <div className="max-w-7xl mx-auto space-y-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12">
-              <div className="col-span-2 md:col-span-4 lg:col-span-2 space-y-6">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
+              <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground">
                     E
@@ -412,17 +415,29 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 space-y-4 sm:space-y-6">
+              <div className="col-span-2 sm:col-span-1 lg:col-span-1 space-y-4 sm:space-y-6">
                 <h5 className="font-bold text-xs sm:text-sm uppercase tracking-widest text-foreground/80">Connect</h5>
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  {["LinkedIn", "Twitter", "Contact Us"].map(item => (
-                    <li key={item}><a href="#" className="hover:text-primary transition-colors">{item}</a></li>
+                <div className="flex items-center gap-3">
+                  {[
+                    { icon: Linkedin, label: "LinkedIn", href: "#" },
+                    { icon: Twitter, label: "Twitter", href: "#" },
+                    { icon: MessageSquare, label: "Contact", href: "#contact" }
+                  ].map((social, i) => (
+                    <a 
+                      key={i} 
+                      href={social.href}
+                      className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-primary/20 transition-all hover:scale-110 group border-white/20"
+                      title={social.label}
+                    >
+                      <social.icon className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
+                      <span className="sr-only">{social.label}</span>
+                    </a>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
 
-            <div className="pt-8 sm:pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-sm text-muted-foreground font-medium">
+            <div className="pt-8 sm:pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-sm text-muted-foreground font-medium text-center md:text-left">
               <div>© 2026 Elite Partners. All rights reserved.</div>
               <div className="flex items-center gap-2">
                 Engineered with precision. 
