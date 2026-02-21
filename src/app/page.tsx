@@ -19,7 +19,6 @@ import {
   ArrowRight,
   Menu,
   ChevronRight,
-  X
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -147,7 +146,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 
-                {/* Floating elements - Hidden or adjusted on small mobile */}
+                {/* Floating elements */}
                 <GlassCard className="absolute top-4 left-4 sm:top-8 sm:left-8 p-3 sm:p-4 flex items-center gap-3 sm:gap-4 border-white/40 scale-90 sm:scale-100">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
@@ -382,8 +381,8 @@ export default function Home() {
         {/* Footer */}
         <footer className="py-12 sm:py-20 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto space-y-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
-              <div className="col-span-1 sm:col-span-2 space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12">
+              <div className="col-span-2 md:col-span-4 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground">
                     E
@@ -413,7 +412,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="space-y-4 sm:space-y-6">
+              <div className="col-span-2 sm:col-span-1 space-y-4 sm:space-y-6">
                 <h5 className="font-bold text-xs sm:text-sm uppercase tracking-widest text-foreground/80">Connect</h5>
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   {["LinkedIn", "Twitter", "Contact Us"].map(item => (
