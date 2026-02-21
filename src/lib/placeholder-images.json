@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract blue and grey glass waves",
+      "imageUrl": "https://images.unsplash.com/photo-1658604663578-04634f4cb897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGdsYXNzfGVufDB8fHx8MTc3MTcxMzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract glass"
+    },
+    {
+      "id": "voip-service",
+      "description": "Enterprise communication technology",
+      "imageUrl": "https://images.unsplash.com/photo-1658314756187-1be18b77c4ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNobm9sb2d5JTIwY29tbXVuaWNhdGlvbnxlbnwwfHx8fDE3NzE3MTM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology communication"
+    },
+    {
+      "id": "crm-service",
+      "description": "Modern CRM interface abstract",
+      "imageUrl": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXNoYm9hcmQlMjBidXNpbmVzc3xlbnwwfHx8fDE3NzE3MTM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard business"
+    },
+    {
+      "id": "ai-service",
+      "description": "Artificial intelligence visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc3MTY3MDU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "virtual-assistant",
+      "description": "Digital assistant workspace",
+      "imageUrl": "https://images.unsplash.com/photo-1764025130362-0162c3dd2035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwd29ya3NwYWNlfGVufDB8fHx8MTc3MTY1MzQ3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital workspace"
+    },
+    {
+      "id": "web-dev",
+      "description": "Modern web development code",
+      "imageUrl": "https://images.unsplash.com/photo-1669023414171-56f0740e34cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2RpbmclMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NzE2NTczNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coding development"
+    }
+  ]
 }
