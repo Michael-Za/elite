@@ -44,7 +44,7 @@ export default function Home() {
   ];
 
   const brandElite = (
-    <span className="text-blue-600 brightness-[1.8] drop-shadow-[0_0_20px_rgba(37,99,235,0.8)] animate-pulse italic font-extrabold">
+    <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse italic font-extrabold">
       Elite
     </span>
   );
@@ -74,7 +74,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex">
                 Client Login
               </GlassButton>
-              <GlassButton size="sm" className="shadow-lg text-xs sm:text-sm px-3 sm:px-4">
+              <GlassButton size="sm" className="shadow-lg text-xs sm:text-sm px-3 sm:px-4 bg-white/40 border-white/50 hover:bg-white/60">
                 Book Consult
               </GlassButton>
               
@@ -131,7 +131,7 @@ export default function Home() {
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <GlassButton className="px-6 sm:px-8 py-6 sm:py-7 text-base sm:text-lg group">
+                <GlassButton className="px-6 sm:px-8 py-6 sm:py-7 text-base sm:text-lg group bg-white/40 border-white/50 hover:bg-white/60">
                   Schedule Consultation
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
@@ -280,22 +280,22 @@ export default function Home() {
                 We hold ourselves to the highest standards of security, reliability, and partnership integrity.
               </p>
               
-              <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   { title: "SOC 2 Certified", desc: "Enterprise-grade security and encryption.", icon: ShieldCheck },
                   { title: "24/7 Always-On", desc: "Dedicated support and 15min response time.", icon: Headphones },
                   { title: "3.2x Average ROI", desc: "Reported ROI within 18 months.", icon: TrendingUp },
                   { title: "150+ Partners", desc: "Global network of technology providers.", icon: CheckCircle2 }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4">
+                  <GlassCard key={i} className="flex gap-4 p-4 border-white/40 hover:border-primary/40 transition-colors">
                     <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
                       <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
                     <div className="space-y-0.5 sm:space-y-1">
                       <div className="text-sm sm:text-base font-bold">{item.title}</div>
-                      <div className="text-xs sm:text-sm text-muted-foreground">{item.desc}</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground leading-tight">{item.desc}</div>
                     </div>
-                  </div>
+                  </GlassCard>
                 ))}
               </div>
             </div>
@@ -377,7 +377,7 @@ export default function Home() {
                   <label className="text-xs sm:text-sm font-semibold">Project Details</label>
                   <textarea className="w-full glass-input min-h-[100px] sm:min-h-[120px] p-4 rounded-xl text-sm" placeholder="Tell us about your challenges..." />
                 </div>
-                <GlassButton className="w-full h-12 sm:h-14 text-base sm:text-lg font-bold group">
+                <GlassButton className="w-full h-12 sm:h-14 text-base sm:text-lg font-bold group bg-white/40 border-white/50 hover:bg-white/60">
                   Send Inquiry
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
