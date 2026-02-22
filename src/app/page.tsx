@@ -49,7 +49,9 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/20">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-tight">Elite Partners</span>
+              <span className="text-lg font-bold tracking-tight italic">
+                <span className="text-primary brightness-150 drop-shadow-[0_0_8px_rgba(var(--primary),0.8)] animate-pulse">Elite</span> Partners
+              </span>
             </div>
             
             {/* Desktop Nav Links */}
@@ -78,8 +80,8 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
                   <SheetHeader className="text-left mb-8">
-                    <SheetTitle className="flex items-center gap-2">
-                      Elite Partners
+                    <SheetTitle className="flex items-center gap-2 italic">
+                      <span className="text-primary brightness-150 drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]">Elite</span> Partners
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-6">
@@ -381,7 +383,9 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold tracking-tight">Elite Partners</span>
+                  <span className="text-xl font-bold tracking-tight italic">
+                    <span className="text-primary brightness-150 drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]">Elite</span> Partners
+                  </span>
                 </div>
                 <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
                   Strategic technology partnerships driving enterprise transformation. Trusted by Fortune-level organizations.
