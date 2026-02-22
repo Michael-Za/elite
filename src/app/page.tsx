@@ -164,7 +164,9 @@ export default function Home() {
                 </GlassCard>
 
                 <GlassCard className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 p-4 sm:p-6 space-y-1 sm:space-y-2 border-white/40 scale-90 sm:scale-100">
-                  <div className="text-2xl sm:text-3xl font-bold">99.9%</div>
+                  <div className="text-2xl sm:text-3xl font-bold">
+                    <NumberTicker value={99.9} suffix="%" decimals={1} />
+                  </div>
                   <div className="text-[8px] sm:text-xs uppercase text-muted-foreground font-bold tracking-widest">Uptime SLA</div>
                 </GlassCard>
               </GlassCard>
