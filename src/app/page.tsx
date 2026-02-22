@@ -44,7 +44,7 @@ export default function Home() {
   ];
 
   const brandElite = (
-    <span className="text-blue-600 brightness-125 drop-shadow-[0_0_12px_rgba(37,99,235,0.8)] animate-pulse italic">
+    <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse italic">
       Elite
     </span>
   );
@@ -105,7 +105,7 @@ export default function Home() {
                       <GlassButton glassVariant="secondary" className="w-full justify-start px-4">
                         Client Login
                       </GlassButton>
-                      <GlassButton className="w-full justify-start px-4">
+                      <GlassButton glassVariant="secondary" className="w-full justify-start px-4">
                         Schedule Consultation
                       </GlassButton>
                     </div>
