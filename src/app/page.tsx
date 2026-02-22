@@ -272,7 +272,9 @@ export default function Home() {
         <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 bg-primary/5">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
             <div className="space-y-6 sm:space-y-8">
-              <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-primary/80">Why Elite Partners</h2>
+              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/30 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-primary/80">
+                Why Elite Partners
+              </h2>
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Built on Trust, Driven by Results</h3>
               <p className="text-muted-foreground text-sm sm:text-lg">
                 We hold ourselves to the highest standards of security, reliability, and partnership integrity.
