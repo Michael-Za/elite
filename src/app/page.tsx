@@ -23,6 +23,7 @@ import {
   Linkedin,
   Twitter,
   MessageSquare,
+  BellRing,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -392,6 +393,38 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
               </div>
+            </GlassCard>
+          </div>
+        </section>
+
+        {/* Newsletter Subscription */}
+        <section className="py-12 sm:py-16 px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
+            <GlassCard className="p-8 sm:p-12 text-center space-y-8 border-white/40 shadow-2xl bg-primary/5">
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+                <BellRing className="w-8 h-8 text-primary animate-bounce" />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl sm:text-3xl font-bold">Elite Technology Insights</h3>
+                <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                  Join 2,500+ enterprise leaders. Receive curated weekly updates on mission-critical tech, ROI roadmaps, and elite partnership strategies.
+                </p>
+              </div>
+              <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
+                <input 
+                  type="email" 
+                  placeholder="Enter work email" 
+                  className="flex-1 glass-input h-12 sm:h-14 px-6 rounded-2xl text-sm focus:ring-primary/40 outline-none" 
+                  required
+                />
+                <GlassButton className="h-12 sm:h-14 px-8 font-bold whitespace-nowrap group">
+                  Subscribe
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </GlassButton>
+              </form>
+              <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-semibold">
+                Weekly Updates • Zero Spam • SOC 2 Secure
+              </p>
             </GlassCard>
           </div>
         </section>
