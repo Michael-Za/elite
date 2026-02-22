@@ -2,39 +2,45 @@
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Abstract blue and grey glass waves",
-      "imageUrl": "https://images.unsplash.com/photo-1658604663578-04634f4cb897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGdsYXNzfGVufDB8fHx8MTc3MTcxMzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract glass"
+      "description": "Modern glass architecture reflecting light",
+      "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2UlMjBnbGFzc3xlbnwwfHx8fDE3NzE3MTM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern glass"
     },
     {
       "id": "voip-service",
-      "description": "Enterprise communication technology",
-      "imageUrl": "https://images.unsplash.com/photo-1658314756187-1be18b77c4ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNobm9sb2d5JTIwY29tbXVuaWNhdGlvbnxlbnwwfHx8fDE3NzE3MTM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "technology communication"
+      "description": "Professional communication headset and digital interface",
+      "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGNvbW11bmljYXRpb258ZW58MHx8fHwxNzcxNzEzNDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business communication"
     },
     {
       "id": "crm-service",
-      "description": "Modern CRM interface abstract",
-      "imageUrl": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXNoYm9hcmQlMjBidXNpbmVzc3xlbnwwfHx8fDE3NzE3MTM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dashboard business"
+      "description": "Data analytics dashboard on a sleek screen",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc3MTcxMzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data analytics"
     },
     {
       "id": "ai-service",
-      "description": "Artificial intelligence visualization",
-      "imageUrl": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc3MTY3MDU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "artificial intelligence"
+      "description": "Neural network visualization glowing in blue",
+      "imageUrl": "https://images.unsplash.com/photo-1620712943543-bcc4638ef808?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYWNoaW5lJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzcxNzEzNDAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "machine learning"
     },
     {
       "id": "virtual-assistant",
-      "description": "Digital assistant workspace",
-      "imageUrl": "https://images.unsplash.com/photo-1764025130362-0162c3dd2035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwd29ya3NwYWNlfGVufDB8fHx8MTc3MTY1MzQ3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Modern minimalist workspace with AI assistant concept",
+      "imageUrl": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwd29ya3NwYWNlfGVufDB8fHx8MTc3MTY1MzQ3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital workspace"
     },
     {
       "id": "web-dev",
-      "description": "Modern web development code",
-      "imageUrl": "https://images.unsplash.com/photo-1669023414171-56f0740e34cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2RpbmclMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NzE2NTczNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coding development"
+      "description": "Sleek code on a high-resolution display",
+      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHwxNzcxNjU3MzU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web development"
+    },
+    {
+      "id": "strategic-consulting",
+      "description": "Professional team collaborating in a glass boardroom",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHJhdGVneSUyMGJ1c2luZXNzfGVufDB8fHx8MTc3MTY1NzM1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "strategy business"
     }
   ]
 }

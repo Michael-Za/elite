@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -50,7 +51,7 @@ export default function Home() {
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/20">
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold tracking-tight italic">
-                <span className="text-blue-500 brightness-150 drop-shadow-[0_0_20px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+                <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
               </span>
             </div>
             
@@ -81,7 +82,7 @@ export default function Home() {
                 <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
                   <SheetHeader className="text-left mb-8">
                     <SheetTitle className="flex items-center gap-2 italic">
-                      <span className="text-blue-500 brightness-150 drop-shadow-[0_0_20px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+                      <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-6">
@@ -141,7 +142,7 @@ export default function Home() {
                   alt="Elite Technology"
                   fill
                   className="object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
-                  data-ai-hint="abstract glass"
+                  data-ai-hint="modern glass"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 
@@ -229,7 +230,7 @@ export default function Home() {
                   title: "Strategic Consulting",
                   desc: "Expert roadmapping to transform operations and maximize technology investments.",
                   icon: TrendingUp,
-                  imgId: "hero-bg"
+                  imgId: "strategic-consulting"
                 }
               ].map((service, i) => (
                 <GlassCard key={i} className="group overflow-hidden flex flex-col h-full border-white/20 hover:border-primary/40">
@@ -384,7 +385,7 @@ export default function Home() {
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
                   <span className="text-xl font-bold tracking-tight italic">
-                    <span className="text-blue-500 brightness-150 drop-shadow-[0_0_20px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+                    <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
                   </span>
                 </div>
                 <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
