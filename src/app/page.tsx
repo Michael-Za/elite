@@ -49,9 +49,6 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/20">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground">
-                E
-              </div>
               <span className="text-lg font-bold tracking-tight">Elite Partners</span>
             </div>
             
@@ -82,9 +79,6 @@ export default function Home() {
                 <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
                   <SheetHeader className="text-left mb-8">
                     <SheetTitle className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground">
-                        E
-                      </div>
                       Elite Partners
                     </SheetTitle>
                   </SheetHeader>
@@ -387,9 +381,6 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground">
-                    E
-                  </div>
                   <span className="text-xl font-bold tracking-tight">Elite Partners</span>
                 </div>
                 <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
