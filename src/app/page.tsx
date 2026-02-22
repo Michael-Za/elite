@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -6,6 +5,7 @@ import { GlassCard } from "@/components/glass-card";
 import { GlassButton } from "@/components/glass-button";
 import { AiAssistant } from "@/components/ai-assistant";
 import { ThemeProvider } from "@/components/theme-provider";
+import { NumberTicker } from "@/components/number-ticker";
 import {
   Phone,
   Code,
@@ -176,13 +176,15 @@ export default function Home() {
         <section className="py-12 sm:py-20 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { label: "Enterprise Clients", value: "150+" },
-              { label: "Uptime SLA", value: "99.99%" },
-              { label: "Years of Excellence", value: "12+" },
-              { label: "ROI Average", value: "3.2x" }
+              { label: "Enterprise Clients", value: 150, suffix: "+" },
+              { label: "Uptime SLA", value: 99.99, suffix: "%", decimals: 2 },
+              { label: "Years of Excellence", value: 12, suffix: "+" },
+              { label: "ROI Average", value: 3.2, suffix: "x", decimals: 1 }
             ].map((stat, i) => (
               <GlassCard key={i} className="p-6 sm:p-8 text-center space-y-1 sm:space-y-2 hover:translate-y-[-4px] transition-transform">
-                <div className="text-2xl sm:text-4xl font-bold text-primary">{stat.value}</div>
+                <div className="text-2xl sm:text-4xl font-bold text-primary">
+                  <NumberTicker value={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
+                </div>
                 <div className="text-[10px] sm:text-sm text-muted-foreground font-medium uppercase tracking-tight">{stat.label}</div>
               </GlassCard>
             ))}
@@ -302,13 +304,19 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
                {[
-                 { value: "150+", label: "Partnerships" },
-                 { value: "3.2×", label: "Average ROI", bg: "bg-primary/10" },
+                 { value: 150, suffix: "+", label: "Partnerships" },
+                 { value: 3.2, suffix: "×", decimals: 1, label: "Average ROI", bg: "bg-primary/10" },
                  { value: "SOC 2", label: "Certified", bg: "bg-accent/10" },
-                 { value: "15m", label: "Response" }
+                 { value: 15, suffix: "m", label: "Response" }
                ].map((item, i) => (
                  <GlassCard key={i} className={`p-4 sm:p-8 flex flex-col justify-center gap-1 sm:gap-2 aspect-square ${item.bg || ''}`}>
-                    <div className="text-2xl sm:text-5xl font-bold">{item.value}</div>
+                    <div className="text-2xl sm:text-5xl font-bold">
+                      {typeof item.value === 'number' ? (
+                        <NumberTicker value={item.value} suffix={item.suffix} decimals={item.decimals} />
+                      ) : (
+                        item.value
+                      )}
+                    </div>
                     <div className="text-[8px] sm:text-sm text-muted-foreground font-bold uppercase tracking-wider">{item.label}</div>
                  </GlassCard>
                ))}
