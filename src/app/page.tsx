@@ -43,6 +43,12 @@ export default function Home() {
     { name: "Contact", href: "#contact" },
   ];
 
+  const brandElite = (
+    <span className="text-blue-600 brightness-125 drop-shadow-[0_0_12px_rgba(37,99,235,0.8)] animate-pulse italic">
+      Elite
+    </span>
+  );
+
   return (
     <ThemeProvider>
       <div className="relative min-h-screen overflow-x-hidden">
@@ -50,8 +56,8 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/20">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-tight italic">
-                <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+              <span className="text-lg font-bold tracking-tight">
+                {brandElite} Partners
               </span>
             </div>
             
@@ -81,8 +87,8 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
                   <SheetHeader className="text-left mb-8">
-                    <SheetTitle className="flex items-center gap-2 italic">
-                      <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+                    <SheetTitle className="flex items-center gap-2">
+                      {brandElite} Partners
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-6">
@@ -119,7 +125,7 @@ export default function Home() {
                 Enterprise Technology Solutions
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                Empowering Enterprises Through <span className="text-primary italic">Elite</span> Partnerships
+                Empowering Enterprises Through {brandElite} Partnerships
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
@@ -384,8 +390,8 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold tracking-tight italic">
-                    <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse">Elite</span> Partners
+                  <span className="text-xl font-bold tracking-tight">
+                    {brandElite} Partners
                   </span>
                 </div>
                 <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
