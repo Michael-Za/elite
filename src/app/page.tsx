@@ -74,7 +74,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex">
                 Client Login
               </GlassButton>
-              <GlassButton size="sm" className="shadow-lg text-xs sm:text-sm px-3 sm:px-4 bg-white/40 border-white/50 hover:bg-white/60">
+              <GlassButton size="sm" className="shadow-lg text-xs sm:text-sm px-3 sm:px-4">
                 Book Consult
               </GlassButton>
               
@@ -85,7 +85,7 @@ export default function Home() {
                     <Menu className="w-6 h-6" />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
+                <SheetContent side="right" className="w-[300px] bg-white/5 backdrop-blur-3xl border-l-white/20">
                   <SheetHeader className="text-left mb-8">
                     <SheetTitle className="flex items-center gap-2 italic">
                       {brandElite} Partners
@@ -131,7 +131,7 @@ export default function Home() {
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <GlassButton className="px-6 sm:px-8 py-6 sm:py-7 text-base sm:text-lg group bg-white/40 border-white/50 hover:bg-white/60">
+                <GlassButton className="px-6 sm:px-8 py-6 sm:py-7 text-base sm:text-lg group">
                   Schedule Consultation
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
@@ -387,7 +387,7 @@ export default function Home() {
                   <label className="text-xs sm:text-sm font-semibold">Project Details</label>
                   <textarea className="w-full glass-input min-h-[100px] sm:min-h-[120px] p-4 rounded-xl text-sm" placeholder="Tell us about your challenges..." />
                 </div>
-                <GlassButton className="w-full h-12 sm:h-14 text-base sm:text-lg font-bold group bg-white/40 border-white/50 hover:bg-white/60">
+                <GlassButton className="w-full h-12 sm:h-14 text-base sm:text-lg font-bold group">
                   Send Inquiry
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
