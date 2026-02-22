@@ -86,7 +86,7 @@ export default function Home() {
                     <Menu className="w-6 h-6" />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-[300px] bg-white/5 backdrop-blur-3xl border-l-white/20">
+                <SheetContent side="right" className="w-[300px] bg-background/80 backdrop-blur-xl border-l-white/20">
                   <SheetHeader className="text-left mb-8">
                     <SheetTitle className="flex items-center gap-2 italic">
                       {brandElite} Partners
@@ -149,7 +149,7 @@ export default function Home() {
                   alt="Elite Technology"
                   fill
                   className="object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
-                  data-ai-hint="modern glass"
+                  data-ai-hint="skyscraper glass"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 
@@ -305,22 +305,22 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
                {[
                  { value: 150, suffix: "+", label: "Partnerships" },
                  { value: 3.2, suffix: "×", decimals: 1, label: "Average ROI", bg: "bg-primary/10" },
                  { value: "SOC 2", label: "Certified", bg: "bg-accent/10" },
                  { value: 15, suffix: "m", label: "Response" }
                ].map((item, i) => (
-                 <GlassCard key={i} className={`p-4 sm:p-8 flex flex-col justify-center gap-1 sm:gap-2 aspect-square ${item.bg || ''}`}>
-                    <div className="text-2xl sm:text-5xl font-bold">
+                 <GlassCard key={i} className={`p-4 sm:p-6 lg:p-4 xl:p-6 flex flex-col justify-center gap-1 sm:gap-2 aspect-square ${item.bg || ''}`}>
+                    <div className="text-xl sm:text-4xl lg:text-2xl xl:text-4xl font-bold">
                       {typeof item.value === 'number' ? (
                         <NumberTicker value={item.value} suffix={item.suffix} decimals={item.decimals} />
                       ) : (
                         item.value
                       )}
                     </div>
-                    <div className="text-[8px] sm:text-sm text-muted-foreground font-bold uppercase tracking-wider">{item.label}</div>
+                    <div className="text-[7px] sm:text-[10px] xl:text-xs text-muted-foreground font-bold uppercase tracking-wider">{item.label}</div>
                  </GlassCard>
                ))}
             </div>
