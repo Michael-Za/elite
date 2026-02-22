@@ -127,9 +127,9 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
                 Empowering Enterprises Through {brandElite} Partnerships
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <h2 className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
-              </p>
+              </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <GlassButton className="px-6 sm:px-8 py-6 sm:py-7 text-base sm:text-lg group">
                   Schedule Consultation
@@ -155,7 +155,7 @@ export default function Home() {
                 {/* Floating elements */}
                 <GlassCard className="absolute top-4 left-4 sm:top-8 sm:left-8 p-3 sm:p-4 flex items-center gap-3 sm:gap-4 border-white/40 scale-90 sm:scale-100">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-pulse" />
                   </div>
                   <div>
                     <div className="text-xs sm:text-sm font-bold whitespace-nowrap">SOC 2 Certified</div>
