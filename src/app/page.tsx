@@ -56,7 +56,7 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/20">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-tight">
+              <span className="text-lg font-bold tracking-tight italic">
                 {brandElite} Partners
               </span>
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] glass-morphism border-l-white/20">
                   <SheetHeader className="text-left mb-8">
-                    <SheetTitle className="flex items-center gap-2">
+                    <SheetTitle className="flex items-center gap-2 italic">
                       {brandElite} Partners
                     </SheetTitle>
                   </SheetHeader>
@@ -272,7 +272,7 @@ export default function Home() {
         <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 bg-primary/5">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
             <div className="space-y-6 sm:space-y-8">
-              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/30 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-primary/80">
+              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 backdrop-blur-md border border-blue-400/20 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
                 Why Elite Partners
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Built on Trust, Driven by Results</h3>
@@ -392,7 +392,7 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold tracking-tight">
+                  <span className="text-xl font-bold tracking-tight italic">
                     {brandElite} Partners
                   </span>
                 </div>
