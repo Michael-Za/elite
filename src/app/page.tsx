@@ -44,7 +44,7 @@ export default function Home() {
   ];
 
   const brandElite = (
-    <span className="text-blue-500 brightness-[2.5] drop-shadow-[0_0_15px_rgba(59,130,246,1)] animate-pulse italic font-extrabold">
+    <span className="text-blue-600 italic font-extrabold">
       Elite
     </span>
   );
