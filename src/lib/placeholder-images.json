@@ -26,9 +26,9 @@
     },
     {
       "id": "virtual-assistant",
-      "description": "Modern minimalist workspace with AI assistant concept",
-      "imageUrl": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwd29ya3NwYWNlfGVufDB8fHx8MTc3MTY1MzQ3OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "digital workspace"
+      "description": "Futuristic AI representation and digital workforce concept",
+      "imageUrl": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "ai assistant"
     },
     {
       "id": "web-dev",
