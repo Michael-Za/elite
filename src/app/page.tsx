@@ -400,7 +400,7 @@ export default function Home() {
 
         {/* Newsletter Subscription */}
         <section className="py-12 sm:py-16 px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-8">
             <GlassCard className="p-8 sm:p-12 text-center space-y-8 border-white/40 shadow-2xl bg-primary/5">
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
                 <BellRing className="w-8 h-8 text-primary animate-bounce" />
@@ -430,15 +430,18 @@ export default function Home() {
             </GlassCard>
 
             {/* Separate Window for Schedule Consultation */}
-            <GlassCard className="p-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 border-white/40 shadow-2xl bg-white/40">
-              <div className="text-lg font-bold tracking-tight italic opacity-80 text-center sm:text-left">
-                Wanna schedule a consultation? Tap here
-              </div>
-              <GlassButton glassVariant="primary" className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/50 bg-white/40 backdrop-blur-md">
+            <div className="flex flex-col items-center gap-6">
+              <GlassCard className="py-4 px-8 border-white/20 bg-white/20 backdrop-blur-md shadow-xl">
+                <div className="text-lg font-bold tracking-tight italic text-foreground text-center">
+                  Wanna schedule a consultation? Tap here
+                </div>
+              </GlassCard>
+              
+              <GlassButton glassVariant="primary" className="px-12 py-8 text-xl font-black group shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] hover:translate-y-[-4px] border-white/60 bg-white/50 backdrop-blur-xl transition-all duration-300">
                 Schedule Consultation
-                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="ml-4 w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </GlassButton>
-            </GlassCard>
+            </div>
           </div>
         </section>
 
