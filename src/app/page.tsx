@@ -234,10 +234,10 @@ export default function Home() {
                   imgId: "web-dev"
                 },
                 {
-                  title: "CRM Systems",
-                  desc: "Bespoke platforms that unify your sales pipeline and automate workflows.",
-                  icon: Users,
-                  imgId: "crm-service"
+                  title: "Virtual Assistants",
+                  desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
+                  icon: Headphones,
+                  imgId: "virtual-assistant"
                 },
                 {
                   title: "Tailored AI Models",
@@ -246,22 +246,22 @@ export default function Home() {
                   imgId: "ai-service"
                 },
                 {
-                  title: "Virtual Assistants",
-                  desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
-                  icon: Headphones,
-                  imgId: "virtual-assistant"
+                  title: "CRM Systems",
+                  desc: "Bespoke platforms that unify your sales pipeline and automate workflows.",
+                  icon: Users,
+                  imgId: "crm-service"
                 }
               ].map((service, i) => (
                 <GlassCard 
                   key={i} 
                   className={cn(
                     "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 shadow-2xl bg-white/40",
-                    service.title === "Virtual Assistants" && "md:col-span-2 lg:col-span-3 md:flex-row"
+                    service.title === "CRM Systems" && "md:col-span-2 lg:col-span-3 md:flex-row"
                   )}
                 >
                   <div className={cn(
                     "relative h-48 sm:h-56 overflow-hidden",
-                    service.title === "Virtual Assistants" && "md:h-auto md:w-1/2 lg:w-2/3"
+                    service.title === "CRM Systems" && "md:h-auto md:w-1/2 lg:w-2/3"
                   )}>
                     <Image
                       src={images.find(img => img.id === service.imgId)?.imageUrl || ""}
@@ -274,7 +274,7 @@ export default function Home() {
                   </div>
                   <div className={cn(
                     "p-8 space-y-5 flex-1 flex flex-col",
-                    service.title === "Virtual Assistants" && "md:w-1/2 lg:w-1/3 justify-center"
+                    service.title === "CRM Systems" && "md:w-1/2 lg:w-1/3 justify-center"
                   )}>
                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shadow-inner border border-primary/5">
                       <service.icon className="w-7 h-7 text-primary" />
