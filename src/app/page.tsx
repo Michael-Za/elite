@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -25,6 +24,7 @@ import {
   Twitter,
   MessageSquare,
   BellRing,
+  Headset,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -195,7 +195,7 @@ export default function Home() {
         <section id="services" className="py-16 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
           <div className="max-w-7xl mx-auto space-y-16">
             <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
-              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/40 backdrop-blur-xl border border-white/60 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-foreground shadow-sm">
+              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-foreground shadow-sm">
                 What We Deliver
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight">Comprehensive Solutions</h3>
@@ -211,6 +211,12 @@ export default function Home() {
                   desc: "Enterprise-grade voice infrastructure with crystal-clear HD calling and CRM integration.",
                   icon: Phone,
                   imgId: "voip-service"
+                },
+                {
+                  title: "Contact Center",
+                  desc: "Elite call center agencies. We handle your technical support, sales, and technical inquiries with dedicated professionals.",
+                  icon: Headset,
+                  imgId: "contact-center"
                 },
                 {
                   title: "Web Development",
@@ -235,12 +241,6 @@ export default function Home() {
                   desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
                   icon: Headphones,
                   imgId: "virtual-assistant"
-                },
-                {
-                  title: "Strategic Consulting",
-                  desc: "Expert roadmapping to transform operations and maximize technology investments.",
-                  icon: TrendingUp,
-                  imgId: "strategic-consulting"
                 }
               ].map((service, i) => (
                 <GlassCard key={i} className="group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 shadow-2xl bg-white/40">
@@ -432,8 +432,8 @@ export default function Home() {
             {/* Separate Window for Schedule Consultation */}
             <div className="flex flex-col items-center gap-6">
               <GlassCard className="py-4 px-8 border-white/20 bg-black/10 backdrop-blur-md shadow-xl">
-                <div className="text-lg font-bold tracking-widest uppercase text-foreground text-center">
-                  Wanna schedule a consultation?
+                <div className="text-lg font-bold tracking-[0.2em] uppercase text-foreground text-center">
+                  WANNA SCHEDULE A CONSULTATION?
                 </div>
               </GlassCard>
               
@@ -463,7 +463,7 @@ export default function Home() {
               <div className="space-y-6">
                 <h5 className="font-black text-xs uppercase tracking-[0.3em] text-foreground">Solutions</h5>
                 <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  {["VoIP Solutions", "Web Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
+                  {["VoIP Solutions", "Contact Center", "Web Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
                     <li key={item}><a href="#" className="hover:text-primary transition-colors">{item}</a></li>
                   ))}
                 </ul>

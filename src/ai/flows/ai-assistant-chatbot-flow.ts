@@ -42,6 +42,7 @@ If a question goes beyond the scope of Elite Partners' services, politely state 
 
 **Core Services:**
 - **VoIP Solutions**: Enterprise-grade voice infrastructure with crystal-clear HD calling, intelligent call routing, and seamless CRM integration — engineered for 99.99% uptime.
+- **Contact Center**: Professional agency-grade call center solutions. We provide the infrastructure and elite staffing for inbound/outbound customer support, sales, and technical assistance.
 - **Custom Web Development**: High-performance, conversion-optimized digital platforms built with modern architectures. From corporate portals to complex SaaS applications, delivered pixel-perfect.
 - **CRM Systems**: Bespoke customer relationship management platforms that unify your sales pipeline, automate workflows, and deliver actionable insights across every touchpoint.
 - **Tailored AI Models**: Custom machine learning solutions trained on your domain data — intelligent document processing, predictive analytics, and conversational AI purpose-built for your operations.
