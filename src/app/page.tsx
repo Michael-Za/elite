@@ -255,8 +255,10 @@ export default function Home() {
                 <GlassCard 
                   key={i} 
                   className={cn(
-                    "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 shadow-2xl bg-white/40",
-                    service.title === "CRM Systems" && "md:col-span-2 lg:col-span-3 md:flex-row"
+                    "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500",
+                    service.title === "CRM Systems" 
+                      ? "md:col-span-2 lg:col-span-3 md:flex-row bg-white/60 backdrop-blur-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)] border-white/80" 
+                      : "shadow-2xl bg-white/40 shadow-black/5"
                   )}
                 >
                   <div className={cn(
