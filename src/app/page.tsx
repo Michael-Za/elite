@@ -431,9 +431,9 @@ export default function Home() {
 
             {/* Separate Window for Schedule Consultation */}
             <div className="flex flex-col items-center gap-6">
-              <GlassCard className="py-4 px-8 border-white/20 bg-white/20 backdrop-blur-md shadow-xl">
-                <div className="text-lg font-bold tracking-tight italic text-foreground text-center">
-                  Wanna schedule a consultation? Tap here
+              <GlassCard className="py-4 px-8 border-white/20 bg-black/10 backdrop-blur-md shadow-xl">
+                <div className="text-lg font-bold tracking-widest uppercase text-foreground text-center">
+                  Wanna schedule a consultation?
                 </div>
               </GlassCard>
               
