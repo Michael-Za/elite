@@ -78,7 +78,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex border-white/40">
                 Client Login
               </GlassButton>
-              <GlassButton size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 bg-primary text-primary-foreground border-transparent hover:opacity-90">
+              <GlassButton size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/40">
                 Book Consult
               </GlassButton>
               
