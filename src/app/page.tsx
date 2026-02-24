@@ -77,7 +77,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex border-white/40">
                 Client Login
               </GlassButton>
-              <GlassButton glassVariant="primary" size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/40 bg-white/40 backdrop-blur-md">
+              <GlassButton glassVariant="primary" size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/50 bg-white/40 backdrop-blur-md">
                 Book Consult
               </GlassButton>
               
@@ -196,7 +196,9 @@ export default function Home() {
         <section id="services" className="py-16 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
           <div className="max-w-7xl mx-auto space-y-16">
             <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
-              <h2 className="text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-primary">What We Deliver</h2>
+              <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/40 backdrop-blur-xl border border-white/60 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-foreground shadow-sm">
+                What We Deliver
+              </h2>
               <h3 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight">Comprehensive Solutions</h3>
               <p className="text-muted-foreground text-sm sm:text-xl font-medium max-w-2xl mx-auto">
                 Every engagement is tailored to your enterprise's unique requirements. We engineer strategic advantages.
@@ -430,7 +432,7 @@ export default function Home() {
 
             {/* Separate Window for Schedule Consultation */}
             <GlassCard className="p-6 flex justify-center items-center border-white/40 shadow-2xl bg-white/40">
-              <GlassButton glassVariant="primary" className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40 bg-white/40 backdrop-blur-md">
+              <GlassButton glassVariant="primary" className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/50 bg-white/40 backdrop-blur-md">
                 Schedule Consultation
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </GlassButton>
