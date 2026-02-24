@@ -259,7 +259,7 @@ export default function Home() {
                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shadow-inner border border-primary/5">
                       <service.icon className="w-7 h-7 text-primary" />
                     </div>
-                    <h4 className="text-xl sm:text-2xl font-black tracking-tight">{service.title}</h4>
+                    <h4 className="text-2xl sm:text-4xl font-black tracking-tighter leading-none">{service.title}</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed font-medium">
                       {service.desc}
                     </p>
