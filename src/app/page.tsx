@@ -297,7 +297,7 @@ export default function Home() {
 
         {/* Why Elite Section */}
         <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 bg-primary/5">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+          <div className="max-w-7xl mx-auto grid xl:grid-cols-2 gap-12 sm:gap-16 items-center">
             <div className="space-y-6 sm:space-y-8">
               <h2 className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-500/10 backdrop-blur-md border border-blue-400/20 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
                 Why Elite Partners
@@ -327,15 +327,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                {[
                  { value: 150, suffix: "+", label: "Partnerships" },
                  { value: 3.2, suffix: "×", decimals: 1, label: "Average ROI", bg: "bg-primary/10" },
                  { value: "SOC 2", label: "Certified", bg: "bg-accent/10" },
                  { value: 15, suffix: "m", label: "Response" }
                ].map((item, i) => (
-                 <GlassCard key={i} className={`p-4 sm:p-6 lg:p-4 xl:p-6 flex flex-col justify-center gap-1 sm:gap-2 aspect-square ${item.bg || ''}`}>
-                    <div className="text-xl sm:text-4xl lg:text-2xl xl:text-4xl font-bold">
+                 <GlassCard key={i} className={`p-4 sm:p-6 flex flex-col justify-center gap-1 sm:gap-2 aspect-square ${item.bg || ''}`}>
+                    <div className="text-xl sm:text-4xl lg:text-3xl xl:text-4xl font-bold">
                       {typeof item.value === 'number' ? (
                         <NumberTicker value={item.value} suffix={item.suffix} decimals={item.decimals} />
                       ) : (
