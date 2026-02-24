@@ -35,7 +35,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 
 export default function Home() {
   const images = PlaceHolderImages;
@@ -77,7 +76,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex border-white/40">
                 Client Login
               </GlassButton>
-              <GlassButton glassVariant="primary" size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/50 bg-white/40 backdrop-blur-md">
+              <GlassButton glassVariant="primary" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/50 bg-white/40 backdrop-blur-md">
                 Book Consult
               </GlassButton>
               
@@ -390,7 +389,7 @@ export default function Home() {
                   <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Project Details</label>
                   <textarea className="w-full glass-input min-h-[140px] p-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="Tell us about your challenges..." />
                 </div>
-                <GlassButton className="w-full h-16 text-lg font-black group bg-primary text-primary-foreground border-transparent shadow-2xl">
+                <GlassButton className="w-full h-16 text-lg font-black group bg-white/60 border-white/80 hover:bg-white/80 text-foreground shadow-2xl">
                   Send Inquiry
                   <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
