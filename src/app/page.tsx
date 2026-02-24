@@ -25,6 +25,7 @@ import {
   MessageSquare,
   BellRing,
   Headset,
+  BarChart3,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -219,6 +220,12 @@ export default function Home() {
                   imgId: "contact-center"
                 },
                 {
+                  title: "Strategic Consulting",
+                  desc: "Expert roadmapping to transform operations and maximize technology investments.",
+                  icon: BarChart3,
+                  imgId: "strategic-consulting"
+                },
+                {
                   title: "Web Development",
                   desc: "High-performance, conversion-optimized digital platforms built with modern architectures.",
                   icon: Code,
@@ -250,7 +257,7 @@ export default function Home() {
                       alt={service.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      data-ai-hint={service.title}
+                      data-ai-hint={service.imageHint || service.title}
                     />
                     <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
                   </div>
@@ -382,6 +389,7 @@ export default function Home() {
                       <option className="text-foreground bg-white">VoIP Solutions</option>
                       <option className="text-foreground bg-white">Web Development</option>
                       <option className="text-foreground bg-white">AI Models</option>
+                      <option className="text-foreground bg-white">Strategic Consulting</option>
                     </select>
                   </div>
                 </div>
@@ -463,7 +471,7 @@ export default function Home() {
               <div className="space-y-6">
                 <h5 className="font-black text-xs uppercase tracking-[0.3em] text-foreground">Solutions</h5>
                 <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  {["VoIP Solutions", "Contact Center", "Web Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
+                  {["VoIP Solutions", "Contact Center", "Strategic Consulting", "Web Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
                     <li key={item}><a href="#" className="hover:text-primary transition-colors">{item}</a></li>
                   ))}
                 </ul>
