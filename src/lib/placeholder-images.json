@@ -44,9 +44,9 @@
     },
     {
       "id": "contact-center",
-      "description": "Modern busy call center with glass partitions",
-      "imageUrl": "https://images.unsplash.com/photo-1549923155-4479382ed63f?q=80&w=1080&auto=format&fit=crop",
-      "imageHint": "call center"
+      "description": "Modern enterprise customer support team with professional headsets",
+      "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "customer support"
     }
   ]
 }
