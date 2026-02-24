@@ -35,7 +35,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -135,7 +134,7 @@ export default function Home() {
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <GlassButton className="px-8 py-7 text-lg group bg-primary text-primary-foreground border-transparent shadow-2xl hover:translate-y-[-2px]">
+                <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
                   Schedule Consultation
                   <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
