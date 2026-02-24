@@ -134,10 +134,6 @@ export default function Home() {
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
-                  Schedule Consultation
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </GlassButton>
                 <GlassButton glassVariant="secondary" className="px-8 py-7 text-lg bg-white/40 border-white/60 shadow-xl hover:translate-y-[-2px]">
                   Explore Services
                 </GlassButton>
@@ -426,7 +422,16 @@ export default function Home() {
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
               </form>
-              <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-semibold">
+              
+              {/* Relocated Schedule Consultation Button */}
+              <div className="pt-4 flex justify-center">
+                <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
+                  Schedule Consultation
+                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </GlassButton>
+              </div>
+
+              <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-semibold pt-4">
                 Weekly Updates • Zero Spam • SOC 2 Secure
               </p>
             </GlassCard>
