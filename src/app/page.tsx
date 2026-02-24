@@ -59,8 +59,8 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/40">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-tight italic">
-                {brandElite} Partners
+              <span className="text-lg font-bold tracking-tight italic flex items-baseline">
+                {brandElite} <span className="text-[10px] uppercase tracking-widest ml-1 font-black opacity-70">Partners</span>
               </span>
             </div>
             
@@ -77,7 +77,7 @@ export default function Home() {
               <GlassButton glassVariant="secondary" size="sm" className="hidden lg:flex border-white/40">
                 Client Login
               </GlassButton>
-              <GlassButton size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/40">
+              <GlassButton glassVariant="primary" size="sm" className="shadow-xl text-xs sm:text-sm px-3 sm:px-4 border-white/40 bg-white/40 backdrop-blur-md">
                 Book Consult
               </GlassButton>
               
@@ -91,7 +91,7 @@ export default function Home() {
                 <SheetContent side="right" className="w-[300px] bg-background/80 backdrop-blur-xl border-l-white/20">
                   <SheetHeader className="text-left mb-8">
                     <SheetTitle className="flex items-center gap-2 italic">
-                      {brandElite} Partners
+                      {brandElite} <span className="text-[10px] uppercase tracking-widest ml-1 font-black opacity-70">Partners</span>
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col gap-6">
@@ -128,7 +128,7 @@ export default function Home() {
                 Enterprise Technology Solutions
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                Empowering Enterprises Through {brandElite} Partnerships
+                Empowering Enterprises Through {brandElite} <span className="text-[0.6em] opacity-80">Partnerships</span>
               </h1>
               <h2 className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 We architect, deploy, and manage mission-critical technology stacks — from intelligent VoIP infrastructure to bespoke CRM platforms.
@@ -303,7 +303,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4">
                {[
                  { value: 150, suffix: "+", label: "Partnerships" },
                  { value: 3.2, suffix: "×", decimals: 1, label: "Average ROI", bg: "bg-primary/10" },
@@ -430,7 +430,7 @@ export default function Home() {
 
             {/* Separate Window for Schedule Consultation */}
             <GlassCard className="p-6 flex justify-center items-center border-white/40 shadow-2xl bg-white/40">
-              <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
+              <GlassButton glassVariant="primary" className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40 bg-white/40 backdrop-blur-md">
                 Schedule Consultation
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </GlassButton>
@@ -444,8 +444,8 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-12">
               <div className="col-span-2 lg:col-span-2 space-y-6">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold tracking-tight italic">
-                    {brandElite} Partners
+                  <span className="text-xl font-bold tracking-tight italic flex items-baseline">
+                    {brandElite} <span className="text-[11px] uppercase tracking-widest ml-1 font-black opacity-70">Partners</span>
                   </span>
                 </div>
                 <p className="text-muted-foreground text-sm sm:text-base max-w-sm leading-relaxed font-medium">
