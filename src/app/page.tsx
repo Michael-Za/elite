@@ -58,8 +58,8 @@ export default function Home() {
         <nav className="fixed top-0 w-full z-40 px-4 sm:px-6 py-4">
           <GlassCard className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center border-white/40">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-tight italic flex items-baseline">
-                {brandElite} <span className="text-[10px] uppercase tracking-widest ml-1 font-black opacity-70">Partners</span>
+              <span className="text-xl font-bold tracking-tight italic flex items-baseline">
+                {brandElite} <span className="text-[11px] uppercase tracking-widest ml-1 font-black opacity-70">Partners</span>
               </span>
             </div>
             
@@ -389,7 +389,7 @@ export default function Home() {
                   <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Project Details</label>
                   <textarea className="w-full glass-input min-h-[140px] p-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="Tell us about your challenges..." />
                 </div>
-                <GlassButton className="w-full h-16 text-lg font-black group bg-white/60 border-white/80 hover:bg-white/80 text-foreground shadow-2xl">
+                <GlassButton className="w-full h-16 text-lg font-black group bg-white/40 backdrop-blur-md border-white/50 text-foreground hover:bg-white/60 shadow-lg">
                   Send Inquiry
                   <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
@@ -430,7 +430,10 @@ export default function Home() {
             </GlassCard>
 
             {/* Separate Window for Schedule Consultation */}
-            <GlassCard className="p-6 flex justify-center items-center border-white/40 shadow-2xl bg-white/40">
+            <GlassCard className="p-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 border-white/40 shadow-2xl bg-white/40">
+              <div className="text-lg font-bold tracking-tight italic opacity-80 text-center sm:text-left">
+                Wanna schedule a consultation? Tap here
+              </div>
               <GlassButton glassVariant="primary" className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/50 bg-white/40 backdrop-blur-md">
                 Schedule Consultation
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
