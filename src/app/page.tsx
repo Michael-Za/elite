@@ -303,7 +303,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                {[
                  { value: 150, suffix: "+", label: "Partnerships" },
                  { value: 3.2, suffix: "×", decimals: 1, label: "Average ROI", bg: "bg-primary/10" },
@@ -399,7 +399,7 @@ export default function Home() {
 
         {/* Newsletter Subscription */}
         <section className="py-12 sm:py-16 px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
             <GlassCard className="p-8 sm:p-12 text-center space-y-8 border-white/40 shadow-2xl bg-primary/5">
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
                 <BellRing className="w-8 h-8 text-primary animate-bounce" />
@@ -423,17 +423,17 @@ export default function Home() {
                 </GlassButton>
               </form>
               
-              {/* Relocated Schedule Consultation Button */}
-              <div className="pt-4 flex justify-center">
-                <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
-                  Schedule Consultation
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </GlassButton>
-              </div>
-
               <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-semibold pt-4">
                 Weekly Updates • Zero Spam • SOC 2 Secure
               </p>
+            </GlassCard>
+
+            {/* Separate Window for Schedule Consultation */}
+            <GlassCard className="p-6 flex justify-center items-center border-white/40 shadow-2xl bg-white/40">
+              <GlassButton className="px-8 py-7 text-lg group shadow-2xl hover:translate-y-[-2px] border-white/40">
+                Schedule Consultation
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </GlassButton>
             </GlassCard>
           </div>
         </section>
