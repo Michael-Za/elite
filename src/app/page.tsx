@@ -30,9 +30,6 @@ import {
   ShoppingBag,
   Smartphone,
   Check,
-  Server,
-  Zap,
-  Lock,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -48,7 +45,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
@@ -373,13 +369,13 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-6">
                       <div className="space-y-2">
-                        <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">Technical Overview</h5>
+                        <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">Technical Overview</h5>
                         <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-medium italic">
                           "{selectedService.details}"
                         </p>
                       </div>
                       <div className="space-y-2">
-                        <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">How We Help</h5>
+                        <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">How We Help</h5>
                         <p className="text-foreground text-sm sm:text-base leading-relaxed font-bold">
                           {selectedService.howWeHelp}
                         </p>
@@ -387,7 +383,7 @@ export default function Home() {
                     </div>
 
                     <div className="space-y-6">
-                      <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">Core Deliverables</h5>
+                      <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">Core Deliverables</h5>
                       <div className="grid gap-3">
                         {selectedService.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 border border-white/60 shadow-sm">
