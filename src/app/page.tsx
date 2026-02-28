@@ -368,13 +368,6 @@ export default function Home() {
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
 
-              <button 
-                onClick={closeOffer}
-                className="absolute top-5 right-5 p-2 rounded-full bg-black/5 hover:bg-black/10 transition-colors z-20 group"
-              >
-                <X className="w-5 h-5 text-foreground/40 group-hover:text-foreground transition-colors" />
-              </button>
-
               <div className="flex justify-center relative px-4">
                 <div className="w-full h-24 sm:h-28 rounded-[2rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group relative">
                   <Image
