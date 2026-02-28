@@ -56,6 +56,63 @@ export default function Home() {
     </span>
   );
 
+  const services = [
+    {
+      title: "VoIP Solutions",
+      desc: "Enterprise-grade voice infrastructure with crystal-clear HD calling and CRM integration.",
+      icon: Phone,
+      imgId: "voip-service"
+    },
+    {
+      title: "Contact Center",
+      desc: "Elite call center agencies. We handle your technical support, sales, and technical inquiries with dedicated professionals.",
+      icon: Headset,
+      imgId: "contact-center"
+    },
+    {
+      title: "Strategic Consulting",
+      desc: "Expert roadmapping to transform operations and maximize technology investments.",
+      icon: BarChart3,
+      imgId: "strategic-consulting"
+    },
+    {
+      title: "Web Development",
+      desc: "High-performance, conversion-optimized digital platforms built with modern architectures.",
+      icon: Code,
+      imgId: "web-dev"
+    },
+    {
+      title: "E-commerce Websites",
+      desc: "High-conversion digital storefronts built for scale. We integrate secure payment gateways and advanced inventory management.",
+      icon: ShoppingBag,
+      imgId: "ecommerce-service"
+    },
+    {
+      title: "App Development",
+      desc: "Native and cross-platform mobile applications engineered for performance, security, and seamless user experiences.",
+      icon: Smartphone,
+      imgId: "app-development"
+    },
+    {
+      title: "Virtual Assistants",
+      desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
+      icon: Headphones,
+      imgId: "virtual-assistant"
+    },
+    {
+      title: "Tailored AI Models",
+      desc: "Custom machine learning solutions trained on your domain data — purpose-built.",
+      icon: Brain,
+      imgId: "ai-service"
+    },
+    {
+      title: "CRM Systems",
+      desc: "Bespoke platforms that unify your sales pipeline and automate workflows.",
+      icon: Users,
+      imgId: "crm-service"
+    }
+  ];
+
   return (
     <ThemeProvider>
       <div className="relative min-h-screen overflow-x-hidden">
@@ -210,65 +267,13 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "VoIP Solutions",
-                  desc: "Enterprise-grade voice infrastructure with crystal-clear HD calling and CRM integration.",
-                  icon: Phone,
-                  imgId: "voip-service"
-                },
-                {
-                  title: "Contact Center",
-                  desc: "Elite call center agencies. We handle your technical support, sales, and technical inquiries with dedicated professionals.",
-                  icon: Headset,
-                  imgId: "contact-center"
-                },
-                {
-                  title: "Strategic Consulting",
-                  desc: "Expert roadmapping to transform operations and maximize technology investments.",
-                  icon: BarChart3,
-                  imgId: "strategic-consulting"
-                },
-                {
-                  title: "Web Development",
-                  desc: "High-performance, conversion-optimized digital platforms built with modern architectures.",
-                  icon: Code,
-                  imgId: "web-dev"
-                },
-                {
-                  title: "E-commerce Websites",
-                  desc: "High-conversion digital storefronts built for scale. We integrate secure payment gateways and advanced inventory management.",
-                  icon: ShoppingBag,
-                  imgId: "ecommerce-service"
-                },
-                {
-                  title: "App Development",
-                  desc: "Native and cross-platform mobile applications engineered for performance, security, and seamless user experiences.",
-                  icon: Smartphone,
-                  imgId: "app-development"
-                },
-                {
-                  title: "Virtual Assistants",
-                  desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
-                  icon: Headphones,
-                  imgId: "virtual-assistant"
-                },
-                {
-                  title: "Tailored AI Models",
-                  desc: "Custom machine learning solutions trained on your domain data — purpose-built.",
-                  icon: Brain,
-                  imgId: "ai-service"
-                },
-                {
-                  title: "CRM Systems",
-                  desc: "Bespoke platforms that unify your sales pipeline and automate workflows.",
-                  icon: Users,
-                  imgId: "crm-service"
-                }
-              ].map((service, i) => (
+              {services.map((service, i) => (
                 <GlassCard 
                   key={i} 
-                  className="group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500 shadow-2xl bg-white/40 shadow-black/5"
+                  className={cn(
+                    "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500 shadow-2xl bg-white/40 shadow-black/5",
+                    i === services.length - 1 && "md:col-span-2 md:max-w-md md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0"
+                  )}
                 >
                   <div className="relative h-48 sm:h-56 overflow-hidden">
                     <Image
@@ -544,3 +549,4 @@ export default function Home() {
     </ThemeProvider>
   );
 }
+

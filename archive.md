@@ -7,7 +7,7 @@ This document provides a comprehensive overview of the Elite Partners website ar
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + ShadCN UI
-- **AI Engine**: Firebase Genkit + Google Gemini 2.0 Flash
+- **AI Engine**: Firebase Genkit + Google Gemini 2.5 Flash
 - **Icons**: Lucide React
 - **Animations**: Framer Motion principles via Tailwind Animate classes
 
@@ -38,7 +38,6 @@ The website features an intelligent AI assistant trained on company domain data.
 ### 🖼️ Data & Asset Management
 - `src/lib/placeholder-images.json`: A centralized registry of high-resolution Unsplash images optimized for the enterprise aesthetic.
 - `src/lib/placeholder-images.ts`: A TypeScript utility for safe, typed referencing of image assets.
-- `src/lib/utils.ts`: Standard Tailwind class merging utility.
 
 ## ✨ Key Features & Sections
 
@@ -57,6 +56,8 @@ A rich grid of enterprise solutions including:
 - **Virtual Assistants**: Scalable AI workforce solutions.
 - **Tailored AI Models**: Domain-specific machine learning.
 - **CRM Systems**: Bespoke customer relationship management.
+
+*Note: On tablet/medium screens, the grid adjusts to 2 columns, with the final service card (CRM Systems) spanning both columns and centered for visual balance.*
 
 ### 3. Trust & Validation
 - Dynamic number tickers for Enterprise Clients, Uptime, ROI, and Partnerships.
