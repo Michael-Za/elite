@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -27,6 +26,7 @@ import {
   BellRing,
   Headset,
   BarChart3,
+  ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -234,6 +234,12 @@ export default function Home() {
                   imgId: "web-dev"
                 },
                 {
+                  title: "E-commerce Websites",
+                  desc: "High-conversion digital storefronts built for scale. We integrate secure payment gateways and advanced inventory management.",
+                  icon: ShoppingBag,
+                  imgId: "ecommerce-service"
+                },
+                {
                   title: "Virtual Assistants",
                   desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
                   icon: Headphones,
@@ -404,6 +410,7 @@ export default function Home() {
                       <option className="text-foreground bg-white">Select a service</option>
                       <option className="text-foreground bg-white">VoIP Solutions</option>
                       <option className="text-foreground bg-white">Web Development</option>
+                      <option className="text-foreground bg-white">E-commerce Websites</option>
                       <option className="text-foreground bg-white">AI Models</option>
                       <option className="text-foreground bg-white">Strategic Consulting</option>
                     </select>
@@ -487,7 +494,7 @@ export default function Home() {
               <div className="space-y-6">
                 <h5 className="font-black text-xs uppercase tracking-[0.3em] text-foreground">Solutions</h5>
                 <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  {["VoIP Solutions", "Contact Center", "Strategic Consulting", "Web Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
+                  {["VoIP Solutions", "Contact Center", "Strategic Consulting", "Web Development", "E-commerce Websites", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
                     <li key={item}><a href="#" className="hover:text-primary transition-colors">{item}</a></li>
                   ))}
                 </ul>

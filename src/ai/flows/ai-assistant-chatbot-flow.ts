@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview An AI assistant chatbot that answers questions about Elite Partners' services.
@@ -46,6 +45,7 @@ If a question goes beyond the scope of Elite Partners' services, politely state 
 - **Contact Center**: Professional agency-grade call center solutions. We provide the infrastructure and elite staffing for inbound/outbound customer support, sales, and technical assistance.
 - **Strategic Consulting**: Expert roadmapping to transform operations and maximize technology investments. We help you architect long-term success through strategic planning.
 - **Custom Web Development**: High-performance, conversion-optimized digital platforms built with modern architectures. From corporate portals to complex SaaS applications, delivered pixel-perfect.
+- **E-commerce Websites**: High-conversion digital storefronts built for scale. We integrate secure payment gateways, advanced inventory management, and personalized shopping experiences designed for the enterprise.
 - **CRM Systems**: Bespoke customer relationship management platforms that unify your sales pipeline, automate workflows, and deliver actionable insights across every touchpoint.
 - **Tailored AI Models**: Custom machine learning solutions trained on your domain data — intelligent document processing, predictive analytics, and conversational AI purpose-built for your operations.
 - **Virtual Assistants**: AI-powered virtual workforce solutions that handle scheduling, data entry, customer inquiries, and administrative tasks — scaling your team's capacity without scaling overhead.

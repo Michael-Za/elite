@@ -51,6 +51,7 @@ A rich grid of enterprise solutions including:
 - **Contact Center**: Professional agency-grade call center solutions.
 - **Strategic Consulting**: Expert technology roadmapping.
 - **Custom Web Development**: Modern high-performance platforms.
+- **E-commerce Websites**: High-conversion digital storefronts built for scale.
 - **Tailored AI Models**: Domain-specific machine learning.
 - **CRM Systems**: Bespoke workflow automation (Hero placement on large screens).
 - **Virtual Assistants**: Scalable AI workforce solutions.
