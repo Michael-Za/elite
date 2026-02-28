@@ -365,28 +365,34 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="p-8 sm:p-12 space-y-8">
+                <div className="p-8 sm:p-12 space-y-10">
                   <div className="grid md:grid-cols-2 gap-10">
-                    <div className="space-y-6">
-                      <div className="space-y-2">
-                        <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">Technical Overview</h5>
-                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-medium italic">
+                    <div className="space-y-8">
+                      <div className="space-y-3">
+                        <h5 className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-foreground bg-white/30 backdrop-blur-md px-4 py-2 rounded-xl w-fit border border-white/40 shadow-sm">
+                          Technical Overview
+                        </h5>
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-medium italic pl-1 border-l-2 border-primary/20">
                           "{selectedService.details}"
                         </p>
                       </div>
-                      <div className="space-y-2">
-                        <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">How We Help</h5>
-                        <p className="text-foreground text-sm sm:text-base leading-relaxed font-bold">
+                      <div className="space-y-3">
+                        <h5 className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-foreground bg-white/30 backdrop-blur-md px-4 py-2 rounded-xl w-fit border border-white/40 shadow-sm">
+                          How We Help
+                        </h5>
+                        <p className="text-foreground text-sm sm:text-base leading-relaxed font-bold pl-1">
                           {selectedService.howWeHelp}
                         </p>
                       </div>
                     </div>
 
                     <div className="space-y-6">
-                      <h5 className="text-[10px] font-black capitalize tracking-widest text-foreground glass-morphism px-3 py-1 rounded-full w-fit mb-1">Core Deliverables</h5>
+                      <h5 className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-foreground bg-white/30 backdrop-blur-md px-4 py-2 rounded-xl w-fit border border-white/40 shadow-sm">
+                        Core Deliverables
+                      </h5>
                       <div className="grid gap-3">
                         {selectedService.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 border border-white/60 shadow-sm">
+                          <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 border border-white/60 shadow-sm hover:translate-x-1 transition-transform">
                             <Check className="w-4 h-4 text-primary shrink-0" />
                             <span className="text-xs sm:text-sm font-bold tracking-tight">{feature}</span>
                           </div>
