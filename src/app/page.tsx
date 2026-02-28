@@ -362,21 +362,21 @@ export default function Home() {
 
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
-          <DialogContent className="max-w-md sm:max-w-2xl lg:max-w-3xl bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
-            <div className="relative p-10 sm:p-14 md:p-20 text-center space-y-12 overflow-hidden">
+          <DialogContent className="max-w-[90vw] sm:max-w-lg bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
+            <div className="relative p-8 sm:p-12 md:p-14 text-center space-y-8 sm:space-y-10 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
 
               <button 
                 onClick={closeOffer}
-                className="absolute top-8 right-8 p-3 rounded-full bg-black/5 hover:bg-black/10 transition-colors z-20 group"
+                className="absolute top-6 right-6 p-2 rounded-full bg-black/5 hover:bg-black/10 transition-colors z-20 group"
               >
-                <X className="w-6 h-6 text-foreground/40 group-hover:text-foreground transition-colors" />
+                <X className="w-5 h-5 text-foreground/40 group-hover:text-foreground transition-colors" />
               </button>
 
-              <div className="flex justify-center relative px-6 md:px-12">
-                <div className="w-full h-56 md:h-72 rounded-[3rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
+              <div className="flex justify-center relative px-4">
+                <div className="w-full h-48 sm:h-56 rounded-[2.5rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
                   <Image 
                     src={images.find(img => img.id === 'offer-badge')?.imageUrl || ""} 
                     alt="50% Off" 
@@ -386,49 +386,49 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                    <span className="text-xs md:text-sm font-black tracking-[0.5em] uppercase opacity-60 mb-2">Exclusive Tier</span>
-                    <span className="text-5xl md:text-7xl font-black tracking-tighter drop-shadow-3xl">ELITE OFFER</span>
+                    <span className="text-[10px] sm:text-xs font-black tracking-[0.4em] uppercase opacity-60 mb-2">Exclusive Tier</span>
+                    <span className="text-4xl sm:text-5xl font-black tracking-tighter drop-shadow-3xl">ELITE OFFER</span>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-8 relative z-10">
-                <div className="flex flex-col gap-4">
-                  <h3 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-xs font-black uppercase tracking-[0.4em] text-blue-700 mx-auto">
+              <div className="space-y-6 sm:space-y-8 relative z-10">
+                <div className="flex flex-col gap-3">
+                  <h3 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 text-[10px] font-black uppercase tracking-[0.3em] text-blue-700 mx-auto">
                     Limited Partnership Invite
                   </h3>
-                  <h4 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] text-foreground">
+                  <h4 className="text-5xl sm:text-6xl font-black tracking-tighter leading-[0.85] text-foreground">
                     Accelerate <br />
                     <span className="text-blue-600">Growth.</span>
                   </h4>
                 </div>
                 
-                <div className="space-y-6">
-                  <div className="text-5xl md:text-6xl font-bold tracking-tight text-foreground/80">
-                    50% <span className="text-base md:text-xl uppercase tracking-[0.2em] opacity-60">Off</span> Web Launch
+                <div className="space-y-4">
+                  <div className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground/80">
+                    50% <span className="text-sm sm:text-base uppercase tracking-[0.2em] opacity-60">Off</span> Web Launch
                   </div>
-                  <p className="text-muted-foreground text-base md:text-lg font-medium max-w-[480px] mx-auto leading-relaxed">
+                  <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-[400px] mx-auto leading-relaxed">
                     We're empowering the next generation of innovators. Launch your enterprise-ready platform at half the investment.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-8 space-y-6 relative z-10">
+              <div className="pt-4 space-y-4 relative z-10">
                 <GlassButton 
                   onClick={() => {
                     closeOffer();
                     window.location.hash = "contact";
                   }}
-                  className="w-full md:max-w-md mx-auto h-24 text-2xl font-black shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[2rem]"
+                  className="w-full sm:max-w-sm mx-auto h-20 text-xl font-black shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[1.8rem]"
                 >
                   Secure My Placement
-                  <ArrowUpRight className="ml-4 w-8 h-8 stroke-[3px]" />
+                  <ArrowUpRight className="ml-3 w-6 h-6 stroke-[3px]" />
                 </GlassButton>
-                <div className="flex flex-col gap-2">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/50">
+                <div className="flex flex-col gap-1.5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground/50">
                     Exclusively for seed & series A startups
                   </p>
-                  <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-600/60">
+                  <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-blue-600/60">
                     2 slots remaining for Q2
                   </p>
                 </div>
