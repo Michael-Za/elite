@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -377,8 +376,15 @@ export default function Home() {
               </button>
 
               <div className="flex justify-center relative">
-                <div className="w-24 h-24 rounded-[2rem] bg-white/60 backdrop-blur-xl flex items-center justify-center border border-white/80 shadow-2xl animate-bounce duration-[2000ms]">
-                  <Sparkles className="w-12 h-12 text-blue-600 drop-shadow-sm" />
+                <div className="w-24 h-24 rounded-[2rem] bg-black backdrop-blur-xl flex items-center justify-center border border-white/20 shadow-2xl">
+                  <Image 
+                    src={images.find(img => img.id === 'offer-badge')?.imageUrl || ""} 
+                    alt="50% Off" 
+                    width={60} 
+                    height={60}
+                    className="object-contain"
+                    data-ai-hint="sale badge"
+                  />
                 </div>
               </div>
 

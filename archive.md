@@ -1,4 +1,3 @@
-
 # Project Archive: Elite Partners Enterprise Portal
 
 This document provides a comprehensive overview of the Elite Partners website architecture, features, and technical implementation details.
@@ -42,9 +41,9 @@ A rich grid of 9 enterprise solutions featuring **Interactive Details Dialogs**:
 - Each service includes technical overviews and strategic value propositions triggered by "Learn More" dialogs.
 
 ### 2. Startup Accelerator Promotion
-- **Premium Startup Offer**: A refined, animated "White Glass" pop-up appearing after 2.5s.
+- **Premium Startup Offer**: A refined, animated "White Glass" pop-up with a high-contrast black promotional badge.
 - **Exclusive Incentive**: 50% discount on Web Development for seed and series A startups.
-- **Human-Centric Design**: Leverages premium scaling animations and high-fidelity backdrop blurs to avoid generic "AI" visual tropes.
+- **Human-Centric Design**: Leverages premium scaling animations and high-fidelity backdrop blurs.
 - Managed via `sessionStorage` to optimize user experience and frequency.
 
 ### 3. Trust & Validation

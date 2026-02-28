@@ -59,6 +59,12 @@
       "description": "High-end mobile application interface displayed on a modern smartphone",
       "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "mobile app"
+    },
+    {
+      "id": "offer-badge",
+      "description": "Premium black and gold 50% off discount badge",
+      "imageUrl": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "sale badge"
     }
   ]
 }
