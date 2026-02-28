@@ -363,7 +363,7 @@ export default function Home() {
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
           <DialogContent className="max-w-[90vw] sm:max-w-md bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
-            <div className="relative p-6 sm:p-10 text-center space-y-4 sm:space-y-6 overflow-hidden">
+            <div className="relative p-6 sm:p-10 md:p-12 text-center space-y-6 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
@@ -393,10 +393,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-3 relative z-10">
-                <div className="flex flex-col gap-1.5">
-                  <h3 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-[9px] font-black uppercase tracking-[0.3em] text-blue-700 mx-auto">
-                    Limited Partnership Invite
+              <div className="space-y-4 relative z-10">
+                <div className="flex flex-col gap-2">
+                  <h3 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black border border-white/20 text-[9px] font-black uppercase tracking-[0.3em] mx-auto relative overflow-hidden">
+                    <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-white/40 via-white to-white/40 bg-[length:200%_auto] animate-shimmer">
+                      Limited Partnership Invite
+                    </span>
                   </h3>
                   <h4 className="text-4xl sm:text-5xl font-black tracking-tighter leading-[0.85] text-foreground">
                     Accelerate <br />
@@ -414,7 +416,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="pt-1 space-y-3 relative z-10">
+              <div className="pt-2 space-y-3 relative z-10">
                 <GlassButton 
                   onClick={() => {
                     closeOffer();
