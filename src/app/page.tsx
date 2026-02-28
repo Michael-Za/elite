@@ -409,13 +409,12 @@ export default function Home() {
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Service Interest *</label>
                     <select className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white appearance-none bg-transparent">
-                      <option className="text-foreground bg-white">Select a service</option>
-                      <option className="text-foreground bg-white">VoIP Solutions</option>
-                      <option className="text-foreground bg-white">Web Development</option>
-                      <option className="text-foreground bg-white">E-commerce Websites</option>
-                      <option className="text-foreground bg-white">App Development</option>
-                      <option className="text-foreground bg-white">AI Models</option>
-                      <option className="text-foreground bg-white">Strategic Consulting</option>
+                      <option className="text-foreground bg-white" value="">Select a service</option>
+                      {services.map((service) => (
+                        <option key={service.title} className="text-foreground bg-white" value={service.title}>
+                          {service.title}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -497,8 +496,8 @@ export default function Home() {
               <div className="space-y-6">
                 <h5 className="font-black text-xs uppercase tracking-[0.3em] text-foreground">Solutions</h5>
                 <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  {["VoIP Solutions", "Contact Center", "Strategic Consulting", "Web Development", "E-commerce Websites", "App Development", "CRM Systems", "AI Models", "Virtual Assistants"].map(item => (
-                    <li key={item}><a href="#" className="hover:text-primary transition-colors">{item}</a></li>
+                  {services.map(service => (
+                    <li key={service.title}><a href="#services" className="hover:text-primary transition-colors">{service.title}</a></li>
                   ))}
                 </ul>
               </div>
@@ -549,4 +548,3 @@ export default function Home() {
     </ThemeProvider>
   );
 }
-
