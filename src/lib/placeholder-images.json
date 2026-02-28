@@ -62,9 +62,9 @@
     },
     {
       "id": "offer-badge",
-      "description": "Premium black and gold offer discount badge",
-      "imageUrl": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1080&auto=format&fit=crop",
-      "imageHint": "sale badge"
+      "description": "Premium special offer promotional badge",
+      "imageUrl": "https://images.unsplash.com/photo-1768839721483-c4501b5d6eb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcGVjaWFsJTIwb2ZmZXJ8ZW58MHx8fHwxNzcyMzE4NDA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "special offer"
     }
   ]
 }
