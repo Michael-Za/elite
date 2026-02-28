@@ -362,8 +362,8 @@ export default function Home() {
 
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
-          <DialogContent className="max-w-[90vw] sm:max-w-lg bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
-            <div className="relative p-5 sm:p-8 text-center space-y-4 sm:space-y-6 overflow-hidden">
+          <DialogContent className="max-w-[90vw] sm:max-w-md bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
+            <div className="relative p-6 sm:p-10 text-center space-y-4 sm:space-y-6 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
@@ -376,15 +376,7 @@ export default function Home() {
               </button>
 
               <div className="flex justify-center relative px-4">
-                <div className="w-full h-28 sm:h-36 rounded-[2rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
-                  <Image 
-                    src={images.find(img => img.id === 'offer-badge')?.imageUrl || ""} 
-                    alt="50% Off" 
-                    fill
-                    className="object-cover opacity-70 group-hover:scale-105 transition-transform duration-1000"
-                    data-ai-hint="sale badge"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                <div className="w-full h-24 sm:h-28 rounded-[2rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
                     <span className="text-[9px] sm:text-[10px] font-black tracking-[0.4em] uppercase opacity-60 mb-1">Exclusive Tier</span>
                     <span className="text-3xl sm:text-4xl font-black tracking-tighter drop-shadow-3xl">ELITE OFFER</span>
@@ -392,7 +384,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 relative z-10">
+              <div className="space-y-3 relative z-10">
                 <div className="flex flex-col gap-1.5">
                   <h3 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-[9px] font-black uppercase tracking-[0.3em] text-blue-700 mx-auto">
                     Limited Partnership Invite
@@ -404,11 +396,11 @@ export default function Home() {
                 </div>
                 
                 <div className="space-y-1">
-                  <div className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground/80">
-                    50% <span className="text-xs sm:text-sm uppercase tracking-[0.2em] opacity-60">Off</span> Web Launch
+                  <div className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground/80">
+                    Priority Web Launch
                   </div>
                   <p className="text-muted-foreground text-xs sm:text-sm font-medium max-w-[360px] mx-auto leading-relaxed">
-                    Launch your enterprise-ready platform at half the investment.
+                    Launch your enterprise-ready platform with elite-grade execution.
                   </p>
                 </div>
               </div>
