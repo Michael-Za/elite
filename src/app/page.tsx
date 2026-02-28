@@ -260,17 +260,9 @@ export default function Home() {
               ].map((service, i) => (
                 <GlassCard 
                   key={i} 
-                  className={cn(
-                    "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500",
-                    service.title === "CRM Systems" 
-                      ? "md:col-span-2 lg:col-span-3 md:flex-row bg-white/60 backdrop-blur-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)] border-white/80" 
-                      : "shadow-2xl bg-white/40 shadow-black/5"
-                  )}
+                  className="group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500 shadow-2xl bg-white/40 shadow-black/5"
                 >
-                  <div className={cn(
-                    "relative h-48 sm:h-56 overflow-hidden",
-                    service.title === "CRM Systems" && "md:h-auto md:w-1/2 lg:w-2/3"
-                  )}>
+                  <div className="relative h-48 sm:h-56 overflow-hidden">
                     <Image
                       src={images.find(img => img.id === service.imgId)?.imageUrl || ""}
                       alt={service.title}
@@ -280,14 +272,11 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
                   </div>
-                  <div className={cn(
-                    "p-8 space-y-5 flex-1 flex flex-col",
-                    service.title === "CRM Systems" && "md:w-1/2 lg:w-1/3 justify-center"
-                  )}>
+                  <div className="p-8 space-y-5 flex-1 flex flex-col">
                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shadow-inner border border-primary/5">
                       <service.icon className="w-7 h-7 text-primary" />
                     </div>
-                    <h4 className="text-2xl sm:text-4xl font-black tracking-tighter leading-none">{service.title}</h4>
+                    <h4 className="text-2xl sm:text-3xl font-black tracking-tighter leading-none">{service.title}</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed font-medium">
                       {service.desc}
                     </p>
@@ -322,7 +311,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <GlassCard key={i} className="flex gap-4 p-4 border-white/40 hover:border-primary/40 transition-colors">
                     <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                      <item.icon className="w-4 h-4 sm:w-5 h-5 text-primary" />
                     </div>
                     <div className="space-y-0.5 sm:space-y-1">
                       <div className="text-sm sm:text-base font-bold">{item.title}</div>

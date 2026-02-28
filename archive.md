@@ -52,9 +52,9 @@ A rich grid of enterprise solutions including:
 - **Strategic Consulting**: Expert technology roadmapping.
 - **Custom Web Development**: Modern high-performance platforms.
 - **E-commerce Websites**: High-conversion digital storefronts built for scale.
-- **Tailored AI Models**: Domain-specific machine learning.
-- **CRM Systems**: Bespoke workflow automation (Hero placement on large screens).
 - **Virtual Assistants**: Scalable AI workforce solutions.
+- **Tailored AI Models**: Domain-specific machine learning.
+- **CRM Systems**: Bespoke customer relationship management.
 
 ### 3. Trust & Validation
 - Dynamic number tickers for Enterprise Clients, Uptime, ROI, and Partnerships.
@@ -63,7 +63,7 @@ A rich grid of enterprise solutions including:
 ### 4. Conversion & Communication
 - **Secure Contact Portal**: Tailored inquiry form with service-specific routing.
 - **Newsletter Subscription**: Integrated glassy footer section for insights.
-- **Schedule Consultation**: Prominent "Wanna schedule a consultation?" prompt with a clear call-to-action.
+- **Schedule Consultation**: Prominent "WANNA SCHEDULE A CONSULTATION?" prompt with a clear call-to-action.
 
 ## 🚀 Deployment & Config
 - `apphosting.yaml`: Configuration for Firebase App Hosting.
