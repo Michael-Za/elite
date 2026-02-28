@@ -1,3 +1,4 @@
+
 # Project Archive: Elite Partners Enterprise Portal
 
 This document provides a comprehensive overview of the Elite Partners website architecture, features, and technical implementation details.
@@ -50,7 +51,8 @@ A rich grid of enterprise solutions including:
 - **VoIP Solutions**: High-uptime voice infrastructure.
 - **Contact Center**: Professional agency-grade call center solutions.
 - **Strategic Consulting**: Expert technology roadmapping.
-- **Custom Web Development**: Modern high-performance platforms.
+- **Web Development**: High-performance, conversion-optimized digital platforms.
+- **App Development**: Native and cross-platform mobile applications for iOS and Android.
 - **E-commerce Websites**: High-conversion digital storefronts built for scale.
 - **Virtual Assistants**: Scalable AI workforce solutions.
 - **Tailored AI Models**: Domain-specific machine learning.

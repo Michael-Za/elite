@@ -53,6 +53,12 @@
       "description": "Sleek modern e-commerce platform interface on a premium laptop",
       "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "ecommerce shop"
+    },
+    {
+      "id": "app-development",
+      "description": "High-end mobile application interface displayed on a modern smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "mobile app"
     }
   ]
 }
