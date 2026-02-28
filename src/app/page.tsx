@@ -1,7 +1,7 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { GlassCard } from "@/components/glass-card";
 import { GlassButton } from "@/components/glass-button";
 import { AiAssistant } from "@/components/ai-assistant";
@@ -29,6 +29,10 @@ import {
   BarChart3,
   ShoppingBag,
   Smartphone,
+  Check,
+  Server,
+  Zap,
+  Lock,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -39,10 +43,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   const images = PlaceHolderImages;
+  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
   const navLinks = [
     { name: "Solutions", href: "#services" },
@@ -60,54 +72,81 @@ export default function Home() {
     {
       title: "VoIP Solutions",
       desc: "Enterprise-grade voice infrastructure with crystal-clear HD calling and CRM integration.",
+      details: "Our VoIP systems are engineered for zero-latency communication across global teams. We provide full SIP trunking, automated failover, and deep integration with your existing tech stack.",
+      howWeHelp: "We replace legacy copper systems with high-availability digital backbones, reducing communication costs by up to 40% while enhancing voice quality and reliability.",
+      features: ["HD Audio Quality", "Global DID Provisioning", "Advanced Call Routing", "Automated Failover Systems"],
       icon: Phone,
       imgId: "voip-service"
     },
     {
       title: "Contact Center",
       desc: "Elite call center agencies. We handle your technical support, sales, and technical inquiries with dedicated professionals.",
+      details: "An omnichannel customer experience platform that unifies voice, chat, email, and social media into a single agent desktop. Powered by AI for sentiment analysis and queue optimization.",
+      howWeHelp: "By outsourcing your contact operations to our elite agencies, you gain access to 24/7 professional staffing and high-tech infrastructure that scales instantly with your volume.",
+      features: ["Omnichannel Support", "AI Sentiment Analysis", "Real-time Dashboards", "Professional Elite Staffing"],
       icon: Headset,
       imgId: "contact-center"
     },
     {
       title: "Strategic Consulting",
       desc: "Expert roadmapping to transform operations and maximize technology investments.",
+      details: "Strategic alignment of business goals with technological capabilities. We provide full-spectrum digital transformation audits and multi-year implementation roadmaps.",
+      howWeHelp: "We bridge the gap between executive vision and technical execution, ensuring that every dollar spent on technology drives a measurable ROI and operational efficiency.",
+      features: ["Technology Audits", "Transformation Roadmapping", "Vendor Selection", "ROI Analysis"],
       icon: BarChart3,
       imgId: "strategic-consulting"
     },
     {
       title: "Web Development",
       desc: "High-performance, conversion-optimized digital platforms built with modern architectures.",
+      details: "Specializing in Next.js and headless architectures, we build web platforms that are incredibly fast, SEO-ready, and conversion-optimized.",
+      howWeHelp: "We transform your digital presence from a simple website into a high-performance business engine, focusing on user experience, load speeds, and enterprise security.",
+      features: ["Next.js Expertise", "Headless CMS Integration", "Performance Optimization", "E2E Security"],
       icon: Code,
       imgId: "web-dev"
     },
     {
       title: "E-commerce Websites",
       desc: "High-conversion digital storefronts built for scale. We integrate secure payment gateways and advanced inventory management.",
+      details: "Enterprise-level e-commerce solutions built for heavy traffic and complex catalogs. We handle everything from global payment routing to complex ERP synchronizations.",
+      howWeHelp: "We help brands scale globally by providing a robust, high-conversion storefront that manages complex multi-currency and multi-warehouse logistics automatically.",
+      features: ["Global Payment Gateways", "Inventory Sync (ERP)", "High-Traffic Stability", "Conversion Rate Optimization"],
       icon: ShoppingBag,
       imgId: "ecommerce-service"
     },
     {
       title: "App Development",
       desc: "Native and cross-platform mobile applications engineered for performance, security, and seamless user experiences.",
+      details: "Building world-class mobile experiences for iOS and Android. Our apps leverage native capabilities to provide the smoothest possible user journeys.",
+      howWeHelp: "We bring your services directly to your customers' pockets with secure, performant apps that drive engagement and provide high-value mobile touchpoints.",
+      features: ["iOS & Android Native", "React Native Experts", "Biometric Security", "Offline Capabilities"],
       icon: Smartphone,
       imgId: "app-development"
     },
     {
       title: "Virtual Assistants",
       desc: "AI-powered virtual workforce solutions that scale your team's capacity effortlessly.",
+      details: "A hybrid workforce of AI agents and human oversight designed to handle repetitive administrative, scheduling, and data entry tasks with 100% accuracy.",
+      howWeHelp: "We liberate your core team from routine tasks, allowing them to focus on high-value strategic work while our virtual assistants maintain your operational momentum 24/7.",
+      features: ["24/7 Task Handling", "CRM Data Entry", "Intelligent Scheduling", "Scale on Demand"],
       icon: Headphones,
       imgId: "virtual-assistant"
     },
     {
       title: "Tailored AI Models",
       desc: "Custom machine learning solutions trained on your domain data — purpose-built.",
+      details: "Proprietary AI models fine-tuned on your specific corporate knowledge. We build secure, private LLMs and predictive analytics tools that live within your firewall.",
+      howWeHelp: "We give your enterprise its own unique intelligence, allowing you to automate complex decision-making and gain insights that off-the-shelf AI simply cannot reach.",
+      features: ["Domain-Specific Training", "Private LLM Deploys", "Predictive Analytics", "Document Intelligence"],
       icon: Brain,
       imgId: "ai-service"
     },
     {
       title: "CRM Systems",
       desc: "Bespoke platforms that unify your sales pipeline and automate workflows.",
+      details: "Advanced CRM implementation and customization that unifies your entire customer lifecycle. We build custom objects, automated flows, and unified reporting dashboards.",
+      howWeHelp: "We eliminate data silos by creating a single source of truth for your sales, marketing, and support teams, resulting in higher close rates and better customer retention.",
+      features: ["Sales Pipeline Automation", "Unified Data Lake", "Custom Workflow Engine", "Executive Reporting"],
       icon: Users,
       imgId: "crm-service"
     }
@@ -125,7 +164,6 @@ export default function Home() {
               </span>
             </div>
             
-            {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-foreground/70">
               {navLinks.map((link) => (
                 <a key={link.name} href={link.href} className="hover:text-primary transition-colors">
@@ -142,7 +180,6 @@ export default function Home() {
                 Book Consult
               </GlassButton>
               
-              {/* Mobile Menu Trigger */}
               <Sheet>
                 <SheetTrigger asChild>
                   <button className="md:hidden p-2 hover:bg-white/40 rounded-xl transition-colors glass-morphism border border-white/40">
@@ -212,7 +249,6 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
                 
-                {/* Floating elements */}
                 <GlassCard className="absolute top-4 left-4 sm:top-8 sm:left-8 p-3 sm:p-4 flex items-center gap-3 sm:gap-4 border-white/40 scale-90 sm:scale-100">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-pulse" />
@@ -293,7 +329,12 @@ export default function Home() {
                     <p className="text-muted-foreground text-sm leading-relaxed font-medium">
                       {service.desc}
                     </p>
-                    <GlassButton glassVariant="secondary" size="sm" className="w-full mt-auto py-6 font-bold text-sm bg-white/60 border-white/80 hover:bg-primary hover:text-primary-foreground hover:border-transparent transition-all">
+                    <GlassButton 
+                      onClick={() => setSelectedService(service)}
+                      glassVariant="secondary" 
+                      size="sm" 
+                      className="w-full mt-auto py-6 font-bold text-sm bg-white/60 border-white/80 hover:bg-primary hover:text-primary-foreground hover:border-transparent transition-all"
+                    >
                       Learn More
                     </GlassButton>
                   </div>
@@ -302,6 +343,88 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Service Detail Dialog */}
+        <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
+          <DialogContent className="max-w-3xl bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] overflow-hidden p-0 gap-0">
+            {selectedService && (
+              <div className="flex flex-col">
+                <div className="relative h-48 sm:h-64 w-full">
+                  <Image
+                    src={images.find(img => img.id === selectedService.imgId)?.imageUrl || ""}
+                    alt={selectedService.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute bottom-6 left-8 flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-xl border border-white/40 flex items-center justify-center shadow-2xl">
+                      <selectedService.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <DialogHeader>
+                      <DialogTitle className="text-3xl sm:text-4xl font-black tracking-tight text-white drop-shadow-lg">
+                        {selectedService.title}
+                      </DialogTitle>
+                    </DialogHeader>
+                  </div>
+                </div>
+                
+                <div className="p-8 sm:p-12 space-y-8">
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="space-y-6">
+                      <div className="space-y-2">
+                        <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">Technical Overview</h5>
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-medium italic">
+                          "{selectedService.details}"
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">How We Help</h5>
+                        <p className="text-foreground text-sm sm:text-base leading-relaxed font-bold">
+                          {selectedService.howWeHelp}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-6">
+                      <h5 className="text-xs font-black uppercase tracking-[0.2em] text-primary">Core Deliverables</h5>
+                      <div className="grid gap-3">
+                        {selectedService.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 border border-white/60 shadow-sm">
+                            <Check className="w-4 h-4 text-primary shrink-0" />
+                            <span className="text-xs sm:text-sm font-bold tracking-tight">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-8 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div className="flex items-center gap-4">
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3].map(i => (
+                          <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-muted overflow-hidden">
+                            <Image src={`https://picsum.photos/seed/${i + 10}/32/32`} alt="Expert" width={32} height={32} />
+                          </div>
+                        ))}
+                      </div>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Expert Team Assigned</span>
+                    </div>
+                    <GlassButton 
+                      onClick={() => {
+                        setSelectedService(null);
+                        window.location.hash = "contact";
+                      }}
+                      className="w-full sm:w-auto px-10 h-14 font-black shadow-xl"
+                    >
+                      Inquire for {selectedService.title}
+                    </GlassButton>
+                  </div>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
 
         {/* Why Elite Section */}
         <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 bg-primary/5">
@@ -462,7 +585,6 @@ export default function Home() {
               </p>
             </GlassCard>
 
-            {/* Separate Window for Schedule Consultation */}
             <div className="flex flex-col items-center gap-6">
               <GlassCard className="py-4 px-8 border-white/20 bg-black/10 backdrop-blur-md shadow-xl">
                 <div className="text-lg font-bold tracking-[0.2em] uppercase text-foreground text-center">

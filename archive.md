@@ -27,7 +27,7 @@ The app uses a custom glassmorphism design system defined in `src/app/globals.cs
 
 ### 🧩 Specialized UI Components
 - `src/components/number-ticker.tsx`: A custom hook-based component for animating numeric statistics with decimals and suffixes.
-- `src/components/ui/`: Contains standard accessible components (Sheet, Button, Input, etc.) powered by Radix UI.
+- `src/components/ui/`: Contains standard accessible components (Sheet, Dialog, Button, Input, etc.) powered by Radix UI.
 
 ### 🤖 Generative AI (Genkit)
 The website features an intelligent AI assistant trained on company domain data.
@@ -45,8 +45,8 @@ The website features an intelligent AI assistant trained on company domain data.
 - Fixed navigation with a glassy backdrop.
 - Hero section featuring a large visual, animated entry, and dynamic SOC 2/Uptime status indicators.
 
-### 2. Services Portfolio
-A rich grid of enterprise solutions including:
+### 2. Services Portfolio (Interactive)
+A rich grid of enterprise solutions featuring **Interactive Details Overlay (Dialogs)**:
 - **VoIP Solutions**: High-uptime voice infrastructure.
 - **Contact Center**: Professional agency-grade call center solutions.
 - **Strategic Consulting**: Expert technology roadmapping.
@@ -56,6 +56,8 @@ A rich grid of enterprise solutions including:
 - **Virtual Assistants**: Scalable AI workforce solutions.
 - **Tailored AI Models**: Domain-specific machine learning.
 - **CRM Systems**: Bespoke customer relationship management.
+
+*Interactive Feature*: Clicking "Learn More" on any card opens a high-fidelity glass dialog containing technical overviews, strategic "How We Help" sections, and core deliverables list.
 
 *Note: On tablet/medium screens, the grid adjusts to 2 columns, with the final service card (CRM Systems) spanning both columns and centered for visual balance.*
 
