@@ -33,6 +33,7 @@ import {
   Zap,
   Sparkles,
   X,
+  ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -63,7 +64,7 @@ export default function Home() {
       if (!hasSeenOffer) {
         setShowOffer(true);
       }
-    }, 2000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -324,7 +325,7 @@ export default function Home() {
                   key={i} 
                   className={cn(
                     "group overflow-hidden flex flex-col h-full border-white/60 hover:border-primary/40 transition-all duration-500 shadow-2xl bg-white/40 shadow-black/5",
-                    i === services.length - 1 && "md:col-span-2 md:max-w-md md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0"
+                    i === services.length - 1 && "md:col-span-2 md:mx-auto lg:col-span-1 lg:mx-0"
                   )}
                 >
                   <div className="relative h-48 sm:h-56 overflow-hidden">
@@ -362,48 +363,65 @@ export default function Home() {
 
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
-          <DialogContent className="max-w-md sm:max-w-lg bg-background/60 backdrop-blur-3xl border-white/40 shadow-3xl rounded-[2.5rem] p-0 overflow-hidden border">
-            <div className="relative p-8 sm:p-12 text-center space-y-8">
+          <DialogContent className="max-w-md sm:max-w-lg bg-white/20 backdrop-blur-[60px] border-white/40 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
+            <div className="relative p-10 sm:p-14 text-center space-y-10 overflow-hidden">
+              {/* Decorative Glow */}
+              <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-400/20 blur-[100px] rounded-full animate-pulse" />
+              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/20 blur-[100px] rounded-full animate-pulse [animation-delay:1s]" />
+
               <button 
                 onClick={closeOffer}
-                className="absolute top-6 right-6 p-2 rounded-full hover:bg-white/20 transition-colors"
+                className="absolute top-8 right-8 p-2.5 rounded-full bg-black/5 hover:bg-black/10 transition-colors z-20 group"
               >
-                <X className="w-5 h-5 text-muted-foreground" />
+                <X className="w-5 h-5 text-foreground/40 group-hover:text-foreground transition-colors" />
               </button>
 
-              <div className="flex justify-center">
-                <div className="w-20 h-20 rounded-3xl bg-blue-600/20 flex items-center justify-center border border-blue-400/30 animate-pulse">
-                  <Zap className="w-10 h-10 text-blue-600" />
+              <div className="flex justify-center relative">
+                <div className="w-24 h-24 rounded-[2rem] bg-white/40 backdrop-blur-xl flex items-center justify-center border border-white/60 shadow-2xl animate-bounce duration-[2000ms]">
+                  <Sparkles className="w-12 h-12 text-blue-600 drop-shadow-sm" />
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-[10px] font-black uppercase tracking-[0.3em] text-blue-600 mx-auto">
-                  <Sparkles className="w-3 h-3" /> Exclusive Startup Offer
-                </h3>
-                <h4 className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
-                  50% OFF <br />
-                  <span className="text-blue-600">Web Development</span>
-                </h4>
-                <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-xs mx-auto">
-                  Scaling your vision shouldn't break the bank. Accelerate your digital launch with Elite Partners.
-                </p>
+              <div className="space-y-6 relative z-10">
+                <div className="flex flex-col gap-3">
+                  <h3 className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 text-[10px] font-black uppercase tracking-[0.4em] text-blue-700 mx-auto">
+                    Limited Partnership Invite
+                  </h3>
+                  <h4 className="text-5xl sm:text-6xl font-black tracking-tighter leading-[0.9] text-foreground">
+                    Accelerate <br />
+                    <span className="text-blue-600">Growth.</span>
+                  </h4>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="text-4xl font-bold tracking-tight text-foreground/80">
+                    50% <span className="text-sm uppercase tracking-widest opacity-60">Off</span> Web Launch
+                  </div>
+                  <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-[280px] mx-auto leading-relaxed">
+                    We're empowering the next generation of innovators. Launch your enterprise-ready platform at half the investment.
+                  </p>
+                </div>
               </div>
 
-              <div className="pt-4 space-y-4">
+              <div className="pt-6 space-y-5 relative z-10">
                 <GlassButton 
                   onClick={() => {
                     closeOffer();
                     window.location.hash = "contact";
                   }}
-                  className="w-full h-16 text-lg font-black shadow-2xl bg-white/80"
+                  className="w-full h-20 text-xl font-black shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[1.5rem]"
                 >
-                  Claim My Discount
-                  <ArrowRight className="ml-2 w-6 h-6" />
+                  Secure My Placement
+                  <ArrowUpRight className="ml-3 w-6 h-6 stroke-[3px]" />
                 </GlassButton>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
-                  Limited to first 5 startups this month • T&Cs Apply
-                </p>
+                <div className="flex flex-col gap-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/50">
+                    Exclusively for seed & series A startups
+                  </p>
+                  <p className="text-[9px] font-bold uppercase tracking-widest text-blue-600/60">
+                    2 slots remaining for Q2
+                  </p>
+                </div>
               </div>
             </div>
           </DialogContent>

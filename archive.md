@@ -39,10 +39,12 @@ The website features an intelligent AI assistant trained on company domain data.
 ### 1. Interactive Services Portfolio
 A rich grid of 9 enterprise solutions featuring **Interactive Details Dialogs**:
 - VoIP Solutions, Contact Center, Strategic Consulting, Web Development, E-commerce, App Development, Virtual Assistants, Tailored AI Models, CRM Systems.
-- Each service includes technical overviews and strategic value propositions.
+- Each service includes technical overviews and strategic value propositions triggered by "Learn More" dialogs.
 
 ### 2. Startup Accelerator Promotion
-- **Exclusive Startup Offer**: A time-delayed (2s) glass pop-up offer granting **50% off Web Development** for startups.
+- **Premium Startup Offer**: A refined, animated "White Glass" pop-up appearing after 2.5s.
+- **Exclusive Incentive**: 50% discount on Web Development for seed and series A startups.
+- **Human-Centric Design**: Leverages premium scaling animations and high-fidelity backdrop blurs to avoid generic "AI" visual tropes.
 - Managed via `sessionStorage` to optimize user experience and frequency.
 
 ### 3. Trust & Validation
@@ -50,7 +52,7 @@ A rich grid of 9 enterprise solutions featuring **Interactive Details Dialogs**:
 - "Why Elite" section highlighting SOC 2 certification and 24/7 support.
 
 ### 4. Conversion Portal
-- Secure inquiry form with service-specific routing.
+- Secure inquiry form with service-specific routing for all 9 core services.
 - Newsletter subscription and consultation booking triggers.
 
 ---
