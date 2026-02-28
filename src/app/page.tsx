@@ -363,7 +363,7 @@ export default function Home() {
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
           <DialogContent className="max-w-[90vw] sm:max-w-lg bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
-            <div className="relative p-8 sm:p-12 md:p-14 text-center space-y-8 sm:space-y-10 overflow-hidden">
+            <div className="relative p-6 sm:p-10 text-center space-y-6 sm:space-y-8 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
@@ -376,7 +376,7 @@ export default function Home() {
               </button>
 
               <div className="flex justify-center relative px-4">
-                <div className="w-full h-48 sm:h-56 rounded-[2.5rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
+                <div className="w-full h-36 sm:h-44 rounded-[2.5rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
                   <Image 
                     src={images.find(img => img.id === 'offer-badge')?.imageUrl || ""} 
                     alt="50% Off" 
@@ -392,8 +392,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-6 sm:space-y-8 relative z-10">
-                <div className="flex flex-col gap-3">
+              <div className="space-y-4 sm:space-y-6 relative z-10">
+                <div className="flex flex-col gap-2">
                   <h3 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-600/20 text-[10px] font-black uppercase tracking-[0.3em] text-blue-700 mx-auto">
                     Limited Partnership Invite
                   </h3>
@@ -403,23 +403,23 @@ export default function Home() {
                   </h4>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <div className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground/80">
                     50% <span className="text-sm sm:text-base uppercase tracking-[0.2em] opacity-60">Off</span> Web Launch
                   </div>
                   <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-[400px] mx-auto leading-relaxed">
-                    We're empowering the next generation of innovators. Launch your enterprise-ready platform at half the investment.
+                    Launch your enterprise-ready platform at half the investment.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4 space-y-4 relative z-10">
+              <div className="pt-2 space-y-4 relative z-10">
                 <GlassButton 
                   onClick={() => {
                     closeOffer();
                     window.location.hash = "contact";
                   }}
-                  className="w-full sm:max-w-sm mx-auto h-20 text-xl font-black shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[1.8rem]"
+                  className="w-full sm:max-w-sm mx-auto h-16 sm:h-20 text-xl font-black shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[1.8rem]"
                 >
                   Secure My Placement
                   <ArrowUpRight className="ml-3 w-6 h-6 stroke-[3px]" />
