@@ -1,38 +1,72 @@
 # Project Archive: Elite Partners Enterprise Portal
 
-This document provides a brief overview of the website's architecture, key features, and file structure.
+This document provides a comprehensive overview of the Elite Partners website architecture, features, and technical implementation details.
 
-## 🏗️ Core Architecture
-The application is built using **Next.js 15 (App Router)**, **TypeScript**, and **Tailwind CSS**. It leverages a custom "Reflex Glass" design system for a high-end, enterprise-grade aesthetic.
+## 🏗️ Core Architecture & Tech Stack
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + ShadCN UI
+- **AI Engine**: Firebase Genkit + Google Gemini 2.0 Flash
+- **Icons**: Lucide React
+- **Animations**: Framer Motion principles via Tailwind Animate classes
 
-## 📂 Key Files & Descriptions
+## 📂 Project Structure & Key Files
 
 ### 🌐 Routing & Layout
-- `src/app/page.tsx`: The primary landing page. It orchestrates the hero section, dynamic statistics, a rich services grid (including VoIP, CRM, and AI), and a secure contact portal.
-- `src/app/layout.tsx`: Defines the root HTML structure, global fonts (Inter), and metadata.
-- `src/app/globals.css`: Contains the Tailwind configuration, HSL theme variables, and custom glassmorphism utility classes (`.glass`, `.glass-morphism`, etc.).
+- `src/app/layout.tsx`: The root layout defining the HTML structure, global fonts (Inter), and metadata.
+- `src/app/page.tsx`: The primary landing page orchestrating the hero section, dynamic stats, services grid, "Why Elite" section, and contact portal.
 
-### 🧩 UI Components
-- `src/components/glass-card.tsx`: A polymorphic container that provides the signature backdrop blur and border effects.
-- `src/components/glass-button.tsx`: An extension of the ShadCN button with specialized variants for primary, secondary, and accent glass styles.
-- `src/components/number-ticker.tsx`: A custom hook-based component that animates numeric statistics for social proof.
-- `src/components/theme-provider.tsx`: Manages theme persistence and platform-specific styling (iOS/Android/Web).
+### 🎨 Design System: "Reflex Glass"
+The app uses a custom glassmorphism design system defined in `src/app/globals.css`.
+- **Core Styles**: Custom utility classes like `.glass`, `.glass-morphism`, and `.glass-button` provide the signature backdrop blur and border effects.
+- **Theme Management**: `src/components/theme-provider.tsx` handles theme persistence (LocalStorage) and platform detection (iOS/Android/Web).
+- **Glass Components**:
+  - `src/components/glass-card.tsx`: A polymorphic container with various glass variants (light, dark, ios).
+  - `src/components/glass-button.tsx`: An extension of the ShadCN button with specialized glass variants.
 
-### 🤖 AI Functionality (Genkit)
-- `src/ai/genkit.ts`: The central configuration for the Google Generative AI plugin.
-- `src/ai/flows/ai-assistant-chatbot-flow.ts`: A server-side Genkit flow that acts as the knowledge base for the "Elite Assistant," trained on company service data.
-- `src/components/ai-assistant.tsx`: The client-side floating chatbot UI that interacts with the Genkit flow.
+### 🧩 Specialized UI Components
+- `src/components/number-ticker.tsx`: A custom hook-based component for animating numeric statistics with decimals and suffixes.
+- `src/components/ui/`: Contains standard accessible components (Sheet, Button, Input, etc.) powered by Radix UI.
 
-### 🖼️ Asset Management
-- `src/lib/placeholder-images.json`: A centralized registry of high-resolution Unsplash images used across the site.
-- `src/lib/placeholder-images.ts`: A TypeScript utility to safely reference image assets throughout the application.
+### 🤖 Generative AI (Genkit)
+The website features an intelligent AI assistant trained on company domain data.
+- `src/ai/genkit.ts`: Centralized Genkit configuration using the Google AI plugin.
+- `src/ai/flows/ai-assistant-chatbot-flow.ts`: A server-side flow defining the "Elite Assistant" persona and knowledge base.
+- `src/components/ai-assistant.tsx`: The client-side floating chatbot interface with real-time scrolling and loading states.
 
-## 🛠️ Technology Stack
-- **Framework**: Next.js 15
-- **Styling**: Tailwind CSS + ShadCN UI
-- **AI Engine**: Firebase Genkit + Google Gemini
-- **Icons**: Lucide React
-- **Animations**: Framer Motion principles (Tailwind Animate)
+### 🖼️ Data & Asset Management
+- `src/lib/placeholder-images.json`: A centralized registry of high-resolution Unsplash images optimized for the enterprise aesthetic.
+- `src/lib/placeholder-images.ts`: A TypeScript utility for safe, typed referencing of image assets.
+- `src/lib/utils.ts`: Standard Tailwind class merging utility.
+
+## ✨ Key Features & Sections
+
+### 1. Hero & Navigation
+- Fixed navigation with a glassy backdrop.
+- Hero section featuring a large visual, animated entry, and dynamic SOC 2/Uptime status indicators.
+
+### 2. Services Portfolio
+A rich grid of enterprise solutions including:
+- **VoIP Solutions**: High-uptime voice infrastructure.
+- **Contact Center**: Professional agency-grade call center solutions.
+- **Strategic Consulting**: Expert technology roadmapping.
+- **Custom Web Development**: Modern high-performance platforms.
+- **Tailored AI Models**: Domain-specific machine learning.
+- **CRM Systems**: Bespoke workflow automation (Hero placement on large screens).
+- **Virtual Assistants**: Scalable AI workforce solutions.
+
+### 3. Trust & Validation
+- Dynamic number tickers for Enterprise Clients, Uptime, ROI, and Partnerships.
+- "Why Elite" section highlighting SOC 2 certification and 24/7 support.
+
+### 4. Conversion & Communication
+- **Secure Contact Portal**: Tailored inquiry form with service-specific routing.
+- **Newsletter Subscription**: Integrated glassy footer section for insights.
+- **Schedule Consultation**: Prominent "Wanna schedule a consultation?" prompt with a clear call-to-action.
+
+## 🚀 Deployment & Config
+- `apphosting.yaml`: Configuration for Firebase App Hosting.
+- `tailwind.config.ts`: Extended theme configuration with custom keyframes for `fade-in` and `blur-in` animations.
 
 ---
-*Generated for Elite Partners Development Team.*
+*Generated for the Elite Partners Development Team.*
