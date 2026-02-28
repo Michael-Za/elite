@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GlassCard } from "@/components/glass-card";
 import { GlassButton } from "@/components/glass-button";
 import { AiAssistant } from "@/components/ai-assistant";
@@ -30,6 +30,9 @@ import {
   ShoppingBag,
   Smartphone,
   Check,
+  Zap,
+  Sparkles,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -45,12 +48,29 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   const images = PlaceHolderImages;
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
+  const [showOffer, setShowOffer] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const hasSeenOffer = sessionStorage.getItem("hasSeenStartupOffer");
+      if (!hasSeenOffer) {
+        setShowOffer(true);
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const closeOffer = () => {
+    setShowOffer(false);
+    sessionStorage.setItem("hasSeenStartupOffer", "true");
+  };
 
   const navLinks = [
     { name: "Solutions", href: "#services" },
@@ -339,6 +359,55 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Startup Offer Pop-up */}
+        <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
+          <DialogContent className="max-w-md sm:max-w-lg bg-background/60 backdrop-blur-3xl border-white/40 shadow-3xl rounded-[2.5rem] p-0 overflow-hidden border">
+            <div className="relative p-8 sm:p-12 text-center space-y-8">
+              <button 
+                onClick={closeOffer}
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <X className="w-5 h-5 text-muted-foreground" />
+              </button>
+
+              <div className="flex justify-center">
+                <div className="w-20 h-20 rounded-3xl bg-blue-600/20 flex items-center justify-center border border-blue-400/30 animate-pulse">
+                  <Zap className="w-10 h-10 text-blue-600" />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-[10px] font-black uppercase tracking-[0.3em] text-blue-600 mx-auto">
+                  <Sparkles className="w-3 h-3" /> Exclusive Startup Offer
+                </h3>
+                <h4 className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
+                  50% OFF <br />
+                  <span className="text-blue-600">Web Development</span>
+                </h4>
+                <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-xs mx-auto">
+                  Scaling your vision shouldn't break the bank. Accelerate your digital launch with Elite Partners.
+                </p>
+              </div>
+
+              <div className="pt-4 space-y-4">
+                <GlassButton 
+                  onClick={() => {
+                    closeOffer();
+                    window.location.hash = "contact";
+                  }}
+                  className="w-full h-16 text-lg font-black shadow-2xl bg-white/80"
+                >
+                  Claim My Discount
+                  <ArrowRight className="ml-2 w-6 h-6" />
+                </GlassButton>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                  Limited to first 5 startups this month • T&Cs Apply
+                </p>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
 
         {/* Service Detail Dialog */}
         <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
