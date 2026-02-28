@@ -363,7 +363,7 @@ export default function Home() {
 
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
-          <DialogContent className="max-w-md sm:max-w-lg bg-white/20 backdrop-blur-[60px] border-white/40 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
+          <DialogContent className="max-w-md sm:max-w-lg bg-white/50 backdrop-blur-[80px] border-white/60 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[3rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
             <div className="relative p-10 sm:p-14 text-center space-y-10 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-400/20 blur-[100px] rounded-full animate-pulse" />
@@ -377,7 +377,7 @@ export default function Home() {
               </button>
 
               <div className="flex justify-center relative">
-                <div className="w-24 h-24 rounded-[2rem] bg-white/40 backdrop-blur-xl flex items-center justify-center border border-white/60 shadow-2xl animate-bounce duration-[2000ms]">
+                <div className="w-24 h-24 rounded-[2rem] bg-white/60 backdrop-blur-xl flex items-center justify-center border border-white/80 shadow-2xl animate-bounce duration-[2000ms]">
                   <Sparkles className="w-12 h-12 text-blue-600 drop-shadow-sm" />
                 </div>
               </div>
