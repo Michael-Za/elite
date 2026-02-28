@@ -375,16 +375,20 @@ export default function Home() {
                 <X className="w-5 h-5 text-foreground/40 group-hover:text-foreground transition-colors" />
               </button>
 
-              <div className="flex justify-center relative">
-                <div className="w-24 h-24 rounded-[2rem] bg-black backdrop-blur-xl flex items-center justify-center border border-white/20 shadow-2xl">
+              <div className="flex justify-center relative px-6">
+                <div className="w-full h-48 rounded-[2.5rem] bg-black/80 backdrop-blur-3xl flex items-center justify-center border border-white/20 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden group">
                   <Image 
                     src={images.find(img => img.id === 'offer-badge')?.imageUrl || ""} 
                     alt="50% Off" 
-                    width={60} 
-                    height={60}
-                    className="object-contain"
+                    fill
+                    className="object-cover opacity-70 group-hover:scale-105 transition-transform duration-1000"
                     data-ai-hint="sale badge"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+                    <span className="text-[10px] font-black tracking-[0.4em] uppercase opacity-60 mb-1">Exclusive Tier</span>
+                    <span className="text-4xl font-black tracking-tighter drop-shadow-2xl">ELITE OFFER</span>
+                  </div>
                 </div>
               </div>
 
