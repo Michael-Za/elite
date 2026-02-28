@@ -422,7 +422,7 @@ export default function Home() {
                     closeOffer();
                     window.location.hash = "contact";
                   }}
-                  className="w-full sm:max-w-sm mx-auto h-14 sm:h-16 text-lg font-black shadow-[0_20px_40px_-10px_rgba(37,99,235,0.25)] bg-blue-600 text-white border-transparent hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all rounded-[1.5rem]"
+                  className="w-full sm:max-w-sm mx-auto h-14 sm:h-16 text-lg font-black shadow-xl bg-white/40 text-foreground border-white/50 hover:bg-white/60 backdrop-blur-xl hover:scale-[1.02] active:scale-95 transition-all rounded-[1.5rem]"
                 >
                   Secure My Placement
                   <ArrowUpRight className="ml-3 w-5 h-5 stroke-[3px]" />
