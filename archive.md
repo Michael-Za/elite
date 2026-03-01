@@ -2,7 +2,7 @@
 
 This document provides a comprehensive overview of the Elite Partners website architecture, features, and technical implementation details.
 
-## 🏗️ Core Architecture & Tech Stack
+## Core Architecture & Tech Stack
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + ShadCN UI
@@ -10,30 +10,30 @@ This document provides a comprehensive overview of the Elite Partners website ar
 - **Icons**: Lucide React
 - **Animations**: Framer Motion principles via Tailwind Animate classes
 
-## 📂 Project Structure & Key Files
+## Project Structure & Key Files
 
-### 🌐 Routing & Layout
+###  Routing & Layout
 - `src/app/layout.tsx`: The root layout defining the HTML structure, global fonts (Inter), and metadata.
 - `src/app/page.tsx`: The primary landing page orchestrating all sections and interactive elements.
 
-### 🎨 Design System: "Reflex Glass"
+### Design System: "Reflex Glass"
 The app uses a custom glassmorphism design system defined in `src/app/globals.css`.
 - **Core Styles**: Custom utility classes like `.glass`, `.glass-morphism`, and `.glass-button` provide the signature backdrop blur and border effects.
 - **Glass Components**:
   - `src/components/glass-card.tsx`: A polymorphic container with various glass variants (light, dark, ios).
   - `src/components/glass-button.tsx`: An extension of the ShadCN button with specialized glass variants.
 
-### 🧩 Specialized UI Components
+### Specialized UI Components
 - `src/components/number-ticker.tsx`: A custom hook-based component for animating numeric statistics.
 - `src/components/ui/`: Standard accessible components (Sheet, Dialog, Button, etc.) powered by Radix UI.
 
-### 🤖 Generative AI (Genkit)
+### Generative AI (Genkit)
 The website features an intelligent AI assistant trained on company domain data.
 - `src/ai/genkit.ts`: Centralized Genkit configuration.
 - `src/ai/flows/ai-assistant-chatbot-flow.ts`: Defines the "Elite Assistant" persona.
 - `src/components/ai-assistant.tsx`: The client-side floating chatbot interface.
 
-## ✨ Key Features & Sections
+## Key Features & Sections
 
 ### 1. Interactive Services Portfolio
 A rich grid of 9 enterprise solutions featuring **Interactive Details Dialogs**:
