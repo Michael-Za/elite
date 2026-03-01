@@ -436,7 +436,7 @@ export default function Home() {
 
         {/* Service Detail Dialog */}
         <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
-          <DialogContent className="max-w-[95vw] md:max-w-3xl h-[90vh] md:h-auto overflow-y-auto bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] overflow-hidden p-0 gap-0">
+          <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[90vh] overflow-y-auto bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] p-0 gap-0">
             {selectedService && (
               <div className="flex flex-col relative">
                 {/* Prominent Close Button for Mobile/Tablet */}
