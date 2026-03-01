@@ -363,7 +363,7 @@ export default function Home() {
         {/* Startup Offer Pop-up */}
         <Dialog open={showOffer} onOpenChange={(open) => !open && closeOffer()}>
           <DialogContent className="max-w-[90vw] sm:max-w-md bg-white/60 backdrop-blur-[100px] border-white/80 shadow-[0_40px_120px_-20px_rgba(0,0,0,0.2)] rounded-[2.5rem] p-0 overflow-hidden border animate-in fade-in zoom-in-95 duration-700">
-            <div className="relative p-6 sm:p-8 md:p-10 text-center space-y-6 overflow-hidden">
+            <div className="relative p-6 sm:p-8 text-center space-y-6 overflow-hidden">
               {/* Decorative Glow */}
               <div className="absolute -top-32 -left-32 w-80 h-80 bg-blue-400/20 blur-[120px] rounded-full animate-pulse" />
               <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-primary/20 blur-[120px] rounded-full animate-pulse [animation-delay:1s]" />
@@ -401,10 +401,10 @@ export default function Home() {
                 
                 <div className="space-y-1">
                   <div className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground/80">
-                    Priority Web Launch
+                    50% Off Web Launch
                   </div>
                   <p className="text-muted-foreground text-xs sm:text-sm font-medium max-w-[360px] mx-auto leading-relaxed">
-                    Launch your enterprise-ready platform with elite-grade execution.
+                    We're empowering the next generation of innovators. Launch your enterprise-ready platform at half the investment.
                   </p>
                 </div>
               </div>
