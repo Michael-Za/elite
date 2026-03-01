@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -435,7 +436,7 @@ export default function Home() {
 
         {/* Service Detail Dialog */}
         <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
-          <DialogContent className="max-w-3xl bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] overflow-hidden p-0 gap-0">
+          <DialogContent className="max-w-[95vw] md:max-w-3xl h-[90vh] md:h-auto overflow-y-auto bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] overflow-hidden p-0 gap-0">
             {selectedService && (
               <div className="flex flex-col relative">
                 {/* Prominent Close Button for Mobile/Tablet */}
@@ -447,7 +448,7 @@ export default function Home() {
                   <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
 
-                <div className="relative h-48 sm:h-64 w-full">
+                <div className="relative h-48 sm:h-64 w-full shrink-0">
                   <Image
                     src={images.find(img => img.id === selectedService.imgId)?.imageUrl || ""}
                     alt={selectedService.title}
