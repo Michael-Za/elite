@@ -437,7 +437,16 @@ export default function Home() {
         <Dialog open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
           <DialogContent className="max-w-3xl bg-background/80 backdrop-blur-2xl border-white/20 shadow-3xl rounded-[2rem] overflow-hidden p-0 gap-0">
             {selectedService && (
-              <div className="flex flex-col">
+              <div className="flex flex-col relative">
+                {/* Prominent Close Button for Mobile/Tablet */}
+                <button 
+                  onClick={() => setSelectedService(null)}
+                  className="absolute right-4 top-4 z-50 p-2 rounded-full bg-black/20 backdrop-blur-md border border-white/20 text-white hover:bg-black/40 transition-colors md:p-3"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-5 h-5 sm:w-6 sm:h-6" />
+                </button>
+
                 <div className="relative h-48 sm:h-64 w-full">
                   <Image
                     src={images.find(img => img.id === selectedService.imgId)?.imageUrl || ""}
