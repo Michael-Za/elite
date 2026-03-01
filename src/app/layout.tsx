@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Reflex Glass | Elite Partners',
+  title: 'Elite Partners',
   description: 'Enterprise Technology Solutions empowering transformation through elite partnerships.',
 };
 
