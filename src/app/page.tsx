@@ -601,7 +601,7 @@ export default function Home() {
                 
                 <div className="space-y-8">
                   {[
-                    { icon: Mail, label: "Work Email", value: "contact@elitepartners.io" },
+                    { icon: Mail, label: "Work Email", value: "sales@elitepartnersus.com" },
                     { icon: Phone, label: "Global Office", value: "+1 (800) 555-ELITE" },
                     { icon: MapPin, label: "Locations", value: "NY · London · Dubai" }
                   ].map((item, i) => (
