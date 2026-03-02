@@ -603,7 +603,7 @@ export default function Home() {
                   {[
                     { icon: Mail, label: "Work Email", value: "sales@elitepartnersus.com" },
                     { icon: Phone, label: "Global Office", value: "+1 (800) 555-ELITE" },
-                    { icon: MapPin, label: "Locations", value: "NY · London · Dubai" }
+                    { icon: MapPin, label: "Locations", value: "UK · Egypt · Dubai" }
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-6 group cursor-pointer">
                       <div className="w-14 h-14 rounded-2xl bg-white/80 border border-white/100 shadow-lg flex items-center justify-center group-hover:bg-primary/10 transition-all duration-300">
