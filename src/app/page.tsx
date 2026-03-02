@@ -57,6 +57,15 @@ export default function Home() {
   const images = PlaceHolderImages;
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
   const [showOffer, setShowOffer] = useState(false);
+  
+  // Form State for Inquiry
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    details: ""
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -71,6 +80,18 @@ export default function Home() {
   const closeOffer = () => {
     setShowOffer(false);
     sessionStorage.setItem("hasSeenStartupOffer", "true");
+  };
+
+  const handleSendInquiry = () => {
+    const subject = encodeURIComponent(`New Inquiry: ${formData.service || 'General'} - ${formData.company || 'New Lead'}`);
+    const body = encodeURIComponent(
+      `Full Name: ${formData.name}\n` +
+      `Work Email: ${formData.email}\n` +
+      `Company: ${formData.company}\n` +
+      `Service Interest: ${formData.service}\n\n` +
+      `Project Details:\n${formData.details}`
+    );
+    window.location.href = `mailto:sales@elitepartnersus.com?subject=${subject}&body=${body}`;
   };
 
   const navLinks = [
@@ -622,21 +643,40 @@ export default function Home() {
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Full Name *</label>
-                    <input className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="John Carter" />
+                    <input 
+                      className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" 
+                      placeholder="John Carter"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Work Email *</label>
-                    <input className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="john@company.com" />
+                    <input 
+                      className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" 
+                      placeholder="john@company.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    />
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Company</label>
-                    <input className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="Acme Corp" />
+                    <input 
+                      className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" 
+                      placeholder="Acme Corp" 
+                      value={formData.company}
+                      onChange={(e) => setFormData({...formData, company: e.target.value})}
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Service Interest *</label>
-                    <select className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white appearance-none bg-transparent">
+                    <select 
+                      className="w-full glass-input h-14 px-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white appearance-none bg-transparent"
+                      value={formData.service}
+                      onChange={(e) => setFormData({...formData, service: e.target.value})}
+                    >
                       <option className="text-foreground bg-white" value="">Select a service</option>
                       {services.map((service) => (
                         <option key={service.title} className="text-foreground bg-white" value={service.title}>
@@ -648,9 +688,17 @@ export default function Home() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs sm:text-sm font-bold tracking-tight px-1">Project Details</label>
-                  <textarea className="w-full glass-input min-h-[140px] p-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" placeholder="Tell us about your challenges..." />
+                  <textarea 
+                    className="w-full glass-input min-h-[140px] p-5 rounded-2xl text-sm font-medium border-white/80 focus:bg-white" 
+                    placeholder="Tell us about your challenges..." 
+                    value={formData.details}
+                    onChange={(e) => setFormData({...formData, details: e.target.value})}
+                  />
                 </div>
-                <GlassButton className="w-full h-16 text-lg font-black group bg-white/40 backdrop-blur-md border-white/50 text-foreground hover:bg-white/60 shadow-lg">
+                <GlassButton 
+                  onClick={handleSendInquiry}
+                  className="w-full h-16 text-lg font-black group bg-white/40 backdrop-blur-md border-white/50 text-foreground hover:bg-white/60 shadow-lg"
+                >
                   Send Inquiry
                   <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </GlassButton>
