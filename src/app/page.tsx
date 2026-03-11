@@ -621,7 +621,7 @@ export default function Home() {
                 <div className="space-y-8">
                   {[
                     { icon: Mail, label: "Work Email", value: "sales@elitepartnersus.com" },
-                    { icon: Phone, label: "Global Office", value: "+1 (800) 555-ELITE" },
+                    { icon: Phone, label: "Global Office", value: "+12317585988" },
                     { icon: MapPin, label: "Locations", value: "UK · Egypt · Dubai" }
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-6 group cursor-pointer">
